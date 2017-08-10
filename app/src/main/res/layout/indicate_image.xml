@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageButton xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="2dp"
+    android:layout_height="2dp"
+    android:background="@android:color/transparent"
+    android:paddingLeft="3dp"
+    android:paddingRight="3dp"
+    android:src="@drawable/selector_indicate"/>

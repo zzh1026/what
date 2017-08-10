@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="168dp"
+    android:layout_height="171dp"
+    android:background="@android:color/white">
+
+    <ImageView
+        android:id="@+id/item_publish_service_logo"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/picture_moren" />
+
+    <TextView
+        android:id="@+id/item_publish_service_top"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="#3000"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/item_publish_service_select"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="1dp"
+        android:padding="6dp"
+        android:src="@drawable/item_publish_service_unselected" />
+
+    <TextView
+        android:id="@+id/item_publish_service_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/item_publish_service_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="7dp"
+        android:text="悦享美食 HAPPY"
+        android:textColor="#636363"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/item_publish_service_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/item_publish_service_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:text="1300 元"
+        android:textColor="#adadad"
+        android:textSize="11sp" />
+
+</RelativeLayout>

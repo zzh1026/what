@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="80dp"
+    android:layout_height="84dp">
+
+    <ImageView
+        android:id="@+id/item_invite_head_iv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/picture_moren" />
+
+    <ImageView
+        android:id="@+id/item_invite_vip_single_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/invite_detail_all_bg"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/item_invite_agree_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/invite_already_agree"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/item_invite_price"
+        android:layout_width="match_parent"
+        android:layout_height="13dp"
+        android:layout_alignParentBottom="true"
+        android:background="#a000"
+        android:gravity="center"
+        android:text="200元"
+        android:textColor="#fff"
+        android:textSize="9sp"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

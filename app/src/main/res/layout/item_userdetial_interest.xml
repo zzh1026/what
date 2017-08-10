@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="9dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/item_userdetial_interest_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17dp"
+            android:scaleType="center"
+            android:src="@drawable/interest_movie" />
+
+        <RelativeLayout
+            android:id="@+id/item_userdetial_interest_content"
+            style="@style/UserDetail_Interest_relativelayout"></RelativeLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/user_detail_interest_line"
+        style="@style/UserDetail_Line_2" />
+</LinearLayout>

@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    tools:context="com.neishenme.what.activity.VIPCenterActivity">
+
+    <com.neishenme.what.view.CustomScrollView
+        android:id="@+id/vip_center_scroll_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/window_bg_f4f3f3"
+        android:scrollbars="none"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="@drawable/vip_center_top_bg"
+                android:gravity="bottom|center_horizontal"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="70dp"
+                    android:layout_height="77dp">
+
+                    <FrameLayout
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_alignParentBottom="true">
+
+                        <com.neishenme.what.view.CircleImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@color/White_66a1a1a1" />
+
+                        <com.neishenme.what.view.CircleImageView
+                            android:id="@+id/vip_center_user_logo"
+                            android:layout_width="65dp"
+                            android:layout_height="66dp"
+                            android:layout_gravity="center"
+                            android:clickable="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/picture_moren" />
+                    </FrameLayout>
+
+                    <ImageView
+                        android:id="@+id/vip_center_crown_img"
+                        android:layout_width="23dp"
+                        android:layout_height="19dp"
+                        android:layout_marginBottom="2dp"
+                        android:src="@drawable/vip_crown_bg"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        android:id="@+id/vip_center_vip_img"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="2dp"
+                        android:src="@drawable/vip_img_bg"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/vip_center_user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#fff"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/vip_center_user_gender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:scaleType="center"
+                        android:src="@drawable/woman_icon" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/vip_center_time_distence"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#f6f7f8"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/vip_center_buy_vip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_marginBottom="19dp"
+                    android:layout_marginTop="18dp"
+                    android:background="@drawable/vip_center_renew_frame"
+                    android:textColor="#fafafa"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/vip_center_activite"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/picture_moren" />
+
+            <LinearLayout
+                style="@style/user_detail_user_item_layout_style"
+                android:layout_height="46dp">
+
+                <ImageView style="@style/user_detail_user_item_bg_style" />
+
+                <TextView
+                    style="@style/user_detail_user_item_text_style"
+                    android:text="会员特权"
+                    android:textColor="#262626" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/vip_center_grid_layout">
+
+                <LinearLayout style="@style/vip_center_grid_item_layout_left_style">
+
+                    <ImageView
+                        style="@style/vip_center_grid_item_image_style"
+                        android:src="@drawable/vip_center_item_1" />
+
+                    <TextView
+                        style="@style/vip_center_grid_item_title_style"
+                        android:text="一步提现" />
+
+                    <TextView
+                        style="@style/vip_center_grid_item_content_style"
+                        android:text="退款没有限制,一次提完全部金额  "
+                        android:id="@+id/textView3" />
+
+                    <ImageView
+                        style="@style/vip_center_grid_item_bottom_img_style"
+                        android:src="@drawable/vip_center_item_01" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/vip_center_grid_item_layout_right_style">
+
+                    <ImageView
+                        style="@style/vip_center_grid_item_image_style"
+                        android:src="@drawable/vip_center_item_2" />
+
+                    <TextView
+                        style="@style/vip_center_grid_item_title_style"
+                        android:text="靠谱保证" />
+
+                    <TextView
+                        style="@style/vip_center_grid_item_content_style"
+                        android:text="预付一半,就可发起一个活动" />
+
+                    <ImageView
+                        style="@style/vip_center_grid_item_bottom_img_style"
+                        android:src="@drawable/vip_center_item_02" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout style="@style/vip_center_grid_layout_bottom">
+
+                <LinearLayout style="@style/vip_center_grid_item_layout_left_style">
+
+                    <ImageView
+                        style="@style/vip_center_grid_item_image_style"
+                        android:src="@drawable/vip_center_item_3" />
+
+                    <TextView
+                        style="@style/vip_center_grid_item_title_style"
+                        android:text="排名靠前" />
+
+                    <TextView
+                        style="@style/vip_center_grid_item_content_style"
+                        android:text="更多的展示,约见更好的人" />
+
+                    <ImageView
+                        style="@style/vip_center_grid_item_bottom_img_style"
+                        android:src="@drawable/vip_center_item_03" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/vip_center_grid_item_layout_right_style">
+
+                    <ImageView
+                        style="@style/vip_center_grid_item_image_style"
+                        android:src="@drawable/vip_center_item_4" />
+
+                    <TextView
+                        style="@style/vip_center_grid_item_title_style"
+                        android:text="钱进多多" />
+
+                    <TextView
+                        style="@style/vip_center_grid_item_content_style"
+                        android:text="得到迟到一方的预算的百分之一的金额" />
+
+                    <ImageView
+                        style="@style/vip_center_grid_item_bottom_img_style"
+                        android:src="@drawable/vip_center_item_04" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout style="@style/vip_center_grid_layout_bottom">
+
+                <LinearLayout style="@style/vip_center_grid_item_layout_left_style">
+
+                    <ImageView
+                        style="@style/vip_center_grid_item_image_style"
+                        android:src="@drawable/vip_center_item_5" />
+
+                    <TextView
+                        style="@style/vip_center_grid_item_title_style"
+                        android:text="身份铭牌" />
+
+                    <TextView
+                        style="@style/vip_center_grid_item_content_style"
+                        android:text="会员独有铭牌展现,你的尊贵,所有人看得见" />
+
+                    <ImageView
+                        style="@style/vip_center_grid_item_bottom_img_style"
+                        android:src="@drawable/vip_center_item_05" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/vip_center_grid_item_layout_right_style">
+
+                    <ImageView
+                        style="@style/vip_center_grid_item_image_style"
+                        android:src="@drawable/vip_center_item_6" />
+
+                    <TextView
+                        style="@style/vip_center_grid_item_title_style"
+                        android:text="年费尊享" />
+
+                    <TextView
+                        style="@style/vip_center_grid_item_content_style"
+                        android:text="首次购买年费会员，立返278元活动余额" />
+
+                    <ImageView
+                        style="@style/vip_center_grid_item_bottom_img_style"
+                        android:src="@drawable/vip_center_item_06" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout style="@style/vip_center_grid_layout_bottom">
+
+                <LinearLayout style="@style/vip_center_grid_item_layout_left_style">
+
+                    <ImageView
+                        style="@style/vip_center_grid_item_image_style"
+                        android:src="@drawable/vip_center_item_7" />
+
+                    <TextView
+                        style="@style/vip_center_grid_item_title_style"
+                        android:text="年费特权" />
+
+                    <TextView
+                        style="@style/vip_center_grid_item_content_style"
+                        android:text="年费会员发起还是加入活动,不再有任何限制" />
+
+                    <ImageView
+                        style="@style/vip_center_grid_item_bottom_img_style"
+                        android:src="@drawable/vip_center_item_07" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/vip_center_grid_item_layout_right_style">
+
+                    <ImageView
+                        style="@style/vip_center_grid_item_image_style"
+                        android:src="@drawable/vip_center_item_8" />
+
+                    <TextView
+                        style="@style/vip_center_grid_item_title_style"
+                        android:text="年费铭牌" />
+
+                    <TextView
+                        style="@style/vip_center_grid_item_content_style"
+                        android:text="年费会员独有铭牌展现" />
+
+                    <ImageView
+                        style="@style/vip_center_grid_item_bottom_img_style"
+                        android:src="@drawable/vip_center_item_08" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+        </LinearLayout>
+    </com.neishenme.what.view.CustomScrollView>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp">
+
+        <View
+            android:id="@+id/vip_center_title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/_010101"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/vip_center_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:scaleType="center"
+            android:src="@drawable/icon_back2x"></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="会员中心"
+            android:textColor="#fff"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

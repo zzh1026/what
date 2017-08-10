@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    tools:context="com.neishenme.what.activity.MyWalletActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f4f3f3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                android:background="@drawable/wallet_my_bg"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="44dp"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="余额(元)"
+                            android:textColor="#fff"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/wallet_my_balance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="0"
+                            android:textColor="#fff"
+                            android:textSize="40sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:background="@drawable/wallet_my_active_money_bg"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        style="@style/wallet_my_yue_linearlayout_style"
+                        android:layout_marginLeft="5dp">
+
+                        <TextView
+                            style="@style/wallet_my_money_title_style"
+                            android:text="现金余额(元)" />
+
+                        <TextView
+                            android:id="@+id/wallet_my_cash_balance"
+                            style="@style/wallet_my_money_text_style"
+                            android:text="0" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/wallet_my_yue_linearlayout_style"
+                        android:layout_marginRight="5dp">
+
+                        <TextView
+                            style="@style/wallet_my_money_title_style"
+                            android:text="活动余额(元)" />
+
+                        <TextView
+                            android:id="@+id/wallet_my_active_balance"
+                            style="@style/wallet_my_money_text_style"
+                            android:text="0" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="bottom"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        style="@style/wallet_my_item_image_bg_style"
+                        android:src="@drawable/wallet_my_records_bg" />
+
+                    <TextView
+                        style="@style/wallet_my_item_text_style"
+                        android:text="消费记录" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.neishenme.what.view.ListViewAdjustHeight
+                    android:id="@+id/wallet_my_records_lv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:cacheColorHint="@android:color/transparent"
+                    android:divider="#f4f3f3"
+                    android:dividerHeight="1dp"
+                    android:listSelector="@android:color/transparent"></com.neishenme.what.view.ListViewAdjustHeight>
+
+                <LinearLayout
+                    android:id="@+id/wallet_my_no_bill"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="60dp"
+                    android:layout_marginTop="60dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="center"
+                        android:src="@drawable/my_wallet_no_bill_bg" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="34dp"
+                        android:gravity="center"
+                        android:text="您还没有消费哦"
+                        android:textColor="#535353"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="#f4f3f3" />
+
+            <LinearLayout
+                android:id="@+id/wallet_my_coupons"
+                style="@style/wallet_my_item_layout_style">
+
+                <ImageView
+                    style="@style/wallet_my_item_image_bg_style"
+                    android:src="@drawable/wallet_my_coupons_bg" />
+
+                <TextView
+                    style="@style/wallet_my_item_text_style"
+                    android:text="我的优惠券" />
+
+                <ImageView
+                    style="@style/wallet_my_item_more_style"
+                    android:src="@drawable/wallet_my_item_more_bg" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#f4f3f3" />
+
+            <LinearLayout
+                android:id="@+id/wallet_my_vip"
+                style="@style/wallet_my_item_layout_style">
+
+                <ImageView
+                    style="@style/wallet_my_item_image_bg_style"
+                    android:src="@drawable/wallet_my_vip_bg" />
+
+                <TextView
+                    style="@style/wallet_my_item_text_style"
+                    android:text="VIP专享服务" />
+
+                <ImageView
+                    style="@style/wallet_my_item_more_style"
+                    android:src="@drawable/wallet_my_item_more_bg" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="#f4f3f3" />
+
+            <LinearLayout
+                android:id="@+id/wallet_my_back_money"
+                style="@style/wallet_my_item_layout_style">
+
+                <ImageView
+                    style="@style/wallet_my_item_image_bg_style"
+                    android:src="@drawable/wallet_my_back_money_bg" />
+
+                <TextView
+                    style="@style/wallet_my_item_text_style"
+                    android:text="退款" />
+
+                <ImageView
+                    style="@style/wallet_my_item_more_style"
+                    android:src="@drawable/wallet_my_item_more_bg" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#f4f3f3" />
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp">
+
+        <ImageView
+            android:id="@+id/wallet_my_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:scaleType="center"
+            android:src="@drawable/icon_back2x"></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="我的钱包"
+            android:textColor="#fff"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/wallet_my_bill"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="2dp"
+            android:text="账单"
+            android:textColor="#fff"
+            android:textSize="14sp" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,128 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.neishenme.what.fragment.WhatFragment">
+
+    <LinearLayout
+        android:id="@+id/ll_main_worning_unshow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+        <RelativeLayout
+            android:id="@+id/rl_recognized_people"
+            android:layout_width="match_parent"
+            android:layout_height="51dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="21dp"
+                android:text="认识的人"
+                android:textColor="@color/Black_4b4b4b" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="18dp"
+                android:src="@drawable/right_arraw" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="21dp"
+            android:background="#55a3a3a3" />
+
+        <RelativeLayout
+            android:id="@+id/rl_focus_people"
+            android:layout_width="match_parent"
+            android:layout_height="48dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="21dp"
+                android:text="关注的人"
+                android:textColor="@color/Black_4b4b4b" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="18dp"
+                android:src="@drawable/right_arraw" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#55a3a3a3" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/user_header_pic"
+                android:layout_width="85dp"
+                android:layout_height="85dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="11dp"
+                android:visibility="invisible" />
+
+            <com.handmark.pulltorefresh.library.PullToRefreshGridView
+                android:id="@+id/pull_refresh_grid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#f9f8f4"
+                android:columnWidth="100dp"
+                android:gravity="fill"
+                android:horizontalSpacing="1dp"
+                android:layoutAnimation="@anim/gridview_anim"
+                android:numColumns="3"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="1dp"></com.handmark.pulltorefresh.library.PullToRefreshGridView>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_main_worning"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/main_worning_bg"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/main_worning_pic_bg" />
+
+        <TextView
+            android:id="@+id/tv_main_worning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="20dp"
+            android:lineSpacingMultiplier="1.3"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:textColor="#fff"
+            android:textScaleX="1.1"
+            android:textSize="13sp" />
+    </LinearLayout>
+</FrameLayout>

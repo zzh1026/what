@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/view_spacing"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_24" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_372"
+        android:layout_marginLeft="@dimen/margin_18"
+        android:layout_marginRight="@dimen/margin_18">
+
+        <ImageView
+            android:id="@+id/iv_reco_pic"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_372"
+            android:scaleType="fitXY" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/margin_48">
+
+            <TextView
+                android:id="@+id/tv_reco_limit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:maxEms="1"
+                android:textColor="#ffffff"
+                android:textSize="7sp" />
+        </FrameLayout>
+
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tv_reco_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_28"
+        android:layout_marginTop="@dimen/margin_22"
+        android:text="地址地址地址"
+        android:textColor="@color/grey_4444"
+        android:textSize="@dimen/txt_28"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_28"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_reco_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/grey_a3a3"
+            android:textSize="@dimen/txt_24" />
+
+        <ImageView
+            android:id="@+id/iv_reco_new"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="12dp"
+            android:src="@drawable/icon_new2x"
+            android:visibility="gone"
+
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_28"
+        android:layout_marginRight="@dimen/margin_48"
+        android:layout_marginTop="4dp"
+
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_reco_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/icon_money2x"
+            android:drawablePadding="5dp"
+            android:textColor="#F35454"
+            android:textSize="@dimen/txt_30" />
+
+
+        <TextView
+            android:id="@+id/tv_reco_map"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:drawableLeft="@drawable/icon_location2x"
+            android:drawablePadding="3dp"
+            android:textColor="@color/grey_7171"
+            android:textSize="@dimen/txt_20" />
+
+        <TextView
+            android:id="@+id/tv_reco_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/grey_7171"
+            android:textSize="@dimen/txt_20" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/margin_18"
+        android:layout_marginRight="@dimen/margin_18"
+        android:layout_marginTop="@dimen/margin_24"
+        android:background="#55a3a3a3" />
+
+</LinearLayout>

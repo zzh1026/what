@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    tools:context="com.neishenme.what.activity.UserDetailActivity">
+
+    <com.neishenme.what.view.CustomScrollView
+        android:id="@+id/user_detail_scroll_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/window_bg_f4f3f3"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/_ffffff"
+            android:descendantFocusability="blocksDescendants"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="231dp">
+
+                <ImageView
+                    android:id="@+id/user_detail_background_iv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/user_background_default" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#4000" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="85dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginLeft="@dimen/margin_34"
+                            android:layout_marginRight="@dimen/margin_20"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/user_detail_username"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textColor="@color/_ffffff"
+                                android:textSize="@dimen/txt_30"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/user_detail_attention"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="@dimen/margin_20"
+                                android:paddingRight="@dimen/margin_20"
+                                android:scaleType="center"
+                                android:src="@drawable/user_detail_edit" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:layout_marginLeft="@dimen/margin_34"
+                        android:layout_marginRight="@dimen/margin_36"
+                        android:background="@drawable/user_detail_line" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="77dp"
+                        android:layout_marginBottom="8dp">
+
+                        <RelativeLayout
+                            android:layout_width="63dp"
+                            android:layout_height="70dp"
+                            android:layout_centerInParent="true">
+
+                            <FrameLayout
+                                android:layout_width="63dp"
+                                android:layout_height="63dp"
+                                android:layout_alignParentBottom="true">
+
+                                <com.neishenme.what.view.CircleImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/user_detail_head_bg" />
+
+                                <com.neishenme.what.view.CircleImageView
+                                    android:id="@+id/user_detail_head_logo"
+                                    android:layout_width="59dp"
+                                    android:layout_height="59dp"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/user_detail_head_bg"
+                                    android:scaleType="centerCrop" />
+                            </FrameLayout>
+
+                            <ImageView
+                                android:id="@+id/user_detail_crown_img"
+                                android:layout_width="21dp"
+                                android:layout_height="17dp"
+                                android:src="@drawable/vip_crown_bg"
+                                android:visibility="invisible" />
+
+                            <ImageView
+                                android:id="@+id/user_detail_user_isvip"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginBottom="2dp"
+                                android:src="@drawable/vip_img_bg"
+                                android:visibility="invisible" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="209dp"
+                            android:layout_height="match_parent"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="22dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout style="@style/user_detail_info_layout_style">
+
+                                <TextView
+                                    style="@style/user_detail_info_type"
+                                    android:text="性别" />
+
+                                <TextView
+                                    android:id="@+id/user_detail_gender"
+                                    style="@style/user_detail_info_type_content" />
+                            </LinearLayout>
+
+                            <View style="@style/user_detail_info_splitline_style" />
+
+                            <LinearLayout style="@style/user_detail_info_layout_style">
+
+                                <TextView
+                                    style="@style/user_detail_info_type"
+                                    android:text="年龄" />
+
+                                <TextView
+                                    android:id="@+id/user_detail_age"
+                                    style="@style/user_detail_info_type_content" />
+                            </LinearLayout>
+
+                            <View style="@style/user_detail_info_splitline_style" />
+
+                            <LinearLayout style="@style/user_detail_info_layout_style">
+
+                                <TextView
+                                    style="@style/user_detail_info_type"
+                                    android:text="关注" />
+
+                                <TextView
+                                    android:id="@+id/user_detail_focus_number"
+                                    style="@style/user_detail_info_type_content" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout style="@style/user_detail_user_item_layout_style">
+
+                <ImageView style="@style/user_detail_user_item_bg_style" />
+
+                <TextView
+                    style="@style/user_detail_user_item_text_style"
+                    android:text="相册" />
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="187dp"
+                android:layout_marginLeft="@dimen/margin_34"
+                android:background="@color/_ffffff"
+                android:paddingBottom="@dimen/margin_40"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/user_detail_photo_first"
+                        android:layout_width="167dp"
+                        android:layout_height="167dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_gravity="start"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/picture_moren" />
+
+                    <LinearLayout
+                        android:id="@+id/user_detail_photo_gallery"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:descendantFocusability="blocksDescendants"
+                        android:orientation="horizontal">
+
+                        <GridView
+                            android:id="@+id/user_detail_photo_grid"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:columnWidth="81dp"
+                            android:horizontalSpacing="@dimen/margin_10"
+                            android:scrollbars="none"
+                            android:stretchMode="columnWidth"
+                            android:verticalSpacing="5dp"></GridView>
+                    </LinearLayout>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/window_bg_f4f3f3" />
+
+            <LinearLayout
+                android:id="@+id/user_detail_my_voice_and_video"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout style="@style/user_detail_user_item_layout_style">
+
+                    <ImageView style="@style/user_detail_user_item_bg_style" />
+
+                    <TextView
+                        style="@style/user_detail_user_item_text_style"
+                        android:text="音频" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="115dp"
+                    android:orientation="horizontal"
+                    android:paddingBottom="14dp">
+
+                    <RelativeLayout
+                        android:id="@+id/user_detail_my_voice"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/user_detail_voice"
+                            android:layout_width="@dimen/width_136"
+                            android:layout_height="@dimen/width_136"
+                            android:scaleType="center"
+                            android:src="@drawable/user_voice_play_bg" />
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/user_detail_my_voice_video_line"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/user_voice_video_line"
+                        android:visibility="invisible" />
+
+                    <RelativeLayout
+                        android:id="@+id/user_detail_my_video"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:visibility="invisible">
+
+                        <com.neishenme.what.view.RadiusImageViewFour
+                            android:id="@+id/user_detail_video"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_centerInParent="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/picture_moren" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:enabled="false"
+                            android:focusable="false"
+                            android:scaleType="center"
+                            android:src="@drawable/user_video_play_bg" />
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/user_detail_zhanwei"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="@color/window_bg_f4f3f3" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/user_detail_user_item_layout_style"
+                android:layout_height="45dp"
+                android:paddingTop="2dp">
+
+                <ImageView style="@style/user_detail_user_item_bg_style" />
+
+                <TextView
+                    style="@style/user_detail_user_item_text_style"
+                    android:text="兴趣" />
+            </LinearLayout>
+
+            <!--<com.neishenme.what.view.ListViewAdjustHeight-->
+            <!--android:id="@+id/user_detail_interests_list"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@android:color/white"-->
+            <!--android:cacheColorHint="@android:color/transparent"-->
+            <!--android:divider="@android:color/transparent"-->
+            <!--android:dividerHeight="0dp"-->
+            <!--android:listSelector="@android:color/transparent"></com.neishenme.what.view.ListViewAdjustHeight>-->
+
+            <RelativeLayout
+                android:id="@+id/user_detail_interest_layout_movie"
+                style="@style/user_detail_user_interest_layout_style">
+
+                <ImageView
+                    style="@style/UserDetail_Interest_imageview"
+                    android:src="@drawable/interest_movie" />
+
+                <RelativeLayout
+                    android:id="@+id/user_detail_interest_content_movie"
+                    style="@style/UserDetail_Interest_relativelayout"></RelativeLayout>
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/user_detail_interest_line_movie"
+                style="@style/UserDetail_Line_2" />
+
+            <RelativeLayout
+                android:id="@+id/user_detail_interest_layout_food"
+                style="@style/user_detail_user_interest_layout_style">
+
+                <ImageView
+                    style="@style/UserDetail_Interest_imageview"
+                    android:src="@drawable/interest_food" />
+
+                <RelativeLayout
+                    android:id="@+id/user_detail_interest_content_food"
+                    style="@style/UserDetail_Interest_relativelayout"></RelativeLayout>
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/user_detail_interest_line_food"
+                style="@style/UserDetail_Line_2" />
+
+            <RelativeLayout
+                android:id="@+id/user_detail_interest_layout_place"
+                style="@style/user_detail_user_interest_layout_style">
+
+                <ImageView
+                    style="@style/UserDetail_Interest_imageview"
+                    android:src="@drawable/interest_plece" />
+
+                <RelativeLayout
+                    android:id="@+id/user_detail_interest_content_place"
+                    style="@style/UserDetail_Interest_relativelayout"></RelativeLayout>
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/user_detail_interest_line_place"
+                style="@style/UserDetail_Line_2" />
+
+            <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="1dp"-->
+            <!--android:layout_marginLeft="17dp"-->
+            <!--android:background="@drawable/user_detail_line_gery" />-->
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/active_user_detail_my_harem_bg" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="48dp"
+                android:background="@drawable/active_my_add_bg" />
+
+            <com.neishenme.what.view.ListViewAdjustHeight
+                android:id="@+id/active_user_detail_my_harem"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="48dp"
+                android:divider="@null"></com.neishenme.what.view.ListViewAdjustHeight>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:background="@color/window_bg_f4f3f3" />
+        </LinearLayout>
+    </com.neishenme.what.view.CustomScrollView>
+
+    <RelativeLayout
+        android:id="@+id/user_detail_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/_010101"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/user_detail_title_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!--<ImageView-->
+        <!--android:id="@+id/user_detail_title_attention"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_marginRight="@dimen/margin_36"-->
+        <!--android:paddingLeft="10dp"-->
+        <!--android:paddingRight="@dimen/margin_20"-->
+        <!--android:scaleType="center"-->
+        <!--android:src="@drawable/user_detail_attention" />-->
+
+        <TextView
+            android:id="@+id/user_detail_title_attention"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/margin_16"
+            android:gravity="center"
+            android:paddingLeft="@dimen/margin_20"
+            android:paddingRight="@dimen/margin_16"
+            android:paddingTop="2dp"
+            android:text="编辑资料"
+            android:textColor="#dfff"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/user_detail_back"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:paddingLeft="9dp"
+        android:paddingRight="15dp"
+        android:scaleType="center"
+        android:src="@drawable/back" />
+</RelativeLayout>

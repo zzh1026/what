@@ -1,0 +1,186 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '23.0.1'
+
+    defaultConfig {
+        applicationId "com.neishenme.what"
+        minSdkVersion 19
+        targetSdkVersion 23
+        versionCode 22
+        versionName "5.1.8"
+
+        // dex突破65535的限制
+        multiDexEnabled true
+        // 默认是官网的渠道
+        manifestPlaceholders = [channelName: "neishenmeguanwang"]
+
+        //启用高性能计算
+    }
+    buildTypes {
+
+        debug {
+            //Zipalign优化
+            zipAlignEnabled true
+            // 移除无用的resource文件
+            shrinkResources false
+            //混淆
+            minifyEnabled false
+            //加载默认混淆配置文件
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        release {
+            // 不显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            //混淆
+            minifyEnabled false
+            //Zipalign优化
+            zipAlignEnabled true
+
+            // 移除无用的resource文件
+            shrinkResources false
+            //前一部分代表系统默认的android程序的混淆文件，该文件已经包含了基本的混淆声明
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    //多渠道打包
+    productFlavors {
+        //乐固加固 19个
+        "91zhushou" {}              //91
+        "anzhi" {}                  //安智市场
+        "baidu" {}                  //百度
+        "dianwanbashi" {}           //电玩巴士
+        "googlemarket" {}           //google市场
+        "huaweimarket" {}           //华为
+        "jifeng" {}                 //机锋
+        "meizu" {}                  //魅族
+        "neishenmegongzhonghao" {}    //内什么公众号
+        "neishenmeguanwang" {}        //官网
+        "oppo" {}                   //oppo
+        "sanxing" {}                //三星
+        "vivo" {}                   //vivo
+        "xiaomi" {}                 //小米
+        "wandoujia" {}              //豌豆荚
+        "yingyongbao" {}            //应用宝
+        "uc" {}
+
+        //360加固 22个
+//        "1seo" {}                     //uc
+//        "2seo" {}                     //uc
+//        "3seo" {}                     //uc
+//        "4seo" {}                     //uc
+//
+//        "5seo" {}                     //
+//        "6seo" {}                     //
+//        "7seo" {}                     //
+//        "8seo" {}                     //
+//
+//        "9seo" {}                     //
+//        "10seo" {}                     //
+//        "11seo" {}                     //
+//        "12seo" {}                     //
+
+//        "360market" {}              //360
+//        "3gandroid" {}              //3g安卓市场
+//        "anbeimarket" {}             //安倍市场
+//        "chuizi" {}                 //锤子
+//        "leshangdian" {}            //乐商店
+//        "liantongxiaowo" {}          //联通小卧
+//        "mumayi" {}                 //木蚂蚁
+//        "nubiya" {}                 //努比亚
+//        "shouhu" {}                 //搜狐
+//        "shuning" {}                //舒宁
+//        "sougou" {}                 //搜狗
+        // 这个不需要了  因为 uc 已经和 淘宝合并     "taobao" {}                 //淘宝
+//        "taipingyang" {}            //太平洋
+//        "wangyi" {}                 //网易
+//        "yijiamarket" {}            //一加商店
+//        "yingyonghui" {}            //应用汇
+//        "youyi" {}                  //优亿
+    }
+
+    productFlavors.all {
+        flavor -> flavor.manifestPlaceholders = [channelName: name]
+    }
+
+    sourceSets.main {
+        jniLibs.srcDirs = ['libs']  // <- - Set your folder here
+    }
+}
+
+//allprojects {
+//    configurations {
+//        all*.exclude group: 'com.android.support', module: 'support-annotations'
+//    }
+//}
+
+dependencies {
+
+    //    compile fileTree(include: ['*.jar'], dir: 'libs')
+//    provided 'com.android.support:support-v4:23.0.1'
+    testCompile 'junit:junit:4.12'
+    compile files('libs/alipaySdk-20160223.jar')
+    compile files('libs/EventBus-2.4.2.jar')
+    compile files('libs/gson-2.5.jar')
+    compile files('libs/jpush-android-2.1.3.jar')
+    compile files('libs/libammsdk.jar')
+    compile files('libs/uil.jar')
+    compile files('libs/zxing.jar')
+    compile project(':devpkg-android')
+    compile project(':volley')
+    compile project(':easeui')
+    compile 'com.android.support:appcompat-v7:23.2.1'
+    compile 'com.android.support:recyclerview-v7:23.2.1'
+    compile 'com.android.support:design:23.2.1'
+    compile 'com.android.support:cardview-v7:23.2.1'
+    compile files('libs/photoView.jar')
+    compile 'com.facebook.rebound:rebound:0.3.8'
+    compile project(':crop')
+    compile 'jp.wasabeef:blurry:2.1.0'
+    compile project(':library')
+    //    compile 'com.nineoldandroids:library:2.4.0'
+    compile project(':animationlibrary')
+    compile 'cn.aigestudio.wheelpicker:WheelPicker:1.1.2'
+    compile 'com.yanzhenjie:permission:1.0.4'
+    compile 'com.zhy:autolayout:1.4.5'
+    //内存泄漏监测工具
+
+    //    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5'
+
+    //    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+
+    //    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+
+    //圆形的progressbar
+    compile 'com.dinuscxj:circleprogressbar:1.1.1'
+    //自定义的评分ratingbar
+    compile 'com.hedgehog.ratingbar:app:1.1.2'
+    //自定义的倒计时类
+    compile 'com.github.iwgang:countdownview:2.1.3'
+    //侧拉删除自定义控件
+    compile 'com.github.mcxtzhang:SwipeDelMenuLayout:V1.2.5'
+    //弹幕库
+    compile 'com.anbetter:danmukulight:1.0.0'
+    //banner图的库,用来显示banner图的自定义效果和无限轮播
+    compile 'com.youth.banner:banner:1.4.9'
+    //下拉刷新的库,非常不错的refresh库
+    compile 'com.lcodecorex:tkrefreshlayout:1.0.7'
+
+    //分享的所有jar
+    compile files('libs/SocialSDK_QQ_Simplify.jar')
+    compile files('libs/SocialSDK_Sina_Simplify.jar')
+    compile files('libs/SocialSDK_WeChat_Simplify.jar')
+    compile files('libs/umeng_social_api.jar')
+    compile files('libs/umeng_social_net.jar')
+    compile files('libs/umeng_social_shareview.jar')
+    compile files('libs/umeng_social_tool.jar')
+
+    compile 'com.android.support:multidex:1.0.1'
+}
+
+//task clean(type: Delete) {
+//    delete rootProject.buildDir
+//}

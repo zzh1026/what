@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/_ffffff"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/Whiteffffff"
+            android:gravity="center"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp"
+            android:text="活动填写"
+            android:textColor="#484848"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#c8c8c8" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="13dp"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="15dp"
+                android:text="主题:"
+                android:textColor="#444444"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/rest_title_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="13dp"
+                android:layout_marginLeft="53dp"
+                android:layout_marginTop="15dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="填写主题"
+                android:imeOptions="actionDone"
+                android:maxLength="15"
+                android:singleLine="true"
+                android:textColor="#6f6f6f"
+                android:textColorHint="#6f6f6f"
+                android:textSize="13sp" />
+
+
+            <ImageView
+                android:id="@+id/rest_title_more_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="25dp"
+                android:paddingRight="23dp"
+                android:src="@drawable/icon_more2x" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/fill_order_line_1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="17dp"
+            android:layout_marginRight="18dp"
+            android:background="#55c8c8c8" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="13dp"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="15dp"
+                android:text="时间:"
+                android:textColor="#444444"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/rest_time_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="13dp"
+                android:layout_marginLeft="53dp"
+                android:layout_marginTop="15dp"
+                android:layout_weight="1"
+                android:text="点击选择时间"
+                android:textColor="#6f6f6f"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="17dp"
+            android:layout_marginRight="18dp"
+            android:background="#55c8c8c8" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="18dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="22dp"
+                android:text="付款方式:"
+                android:textColor="#444444"
+                android:textSize="14sp" />
+
+            <RadioGroup
+                android:id="@+id/rest_paytype_rg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rest_payme_rb"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_order_paytype"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:text="我请客"
+                    android:textColor="@drawable/selector_order_paytype_text" />
+
+                <RadioButton
+                    android:id="@+id/rest_payother_rb"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_order_paytype"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="求请客"
+                    android:textColor="@drawable/selector_order_paytype_text" />
+
+                <RadioButton
+                    android:id="@+id/rest_payaa_rb"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_order_paytype"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="AA制"
+                    android:textColor="@drawable/selector_order_paytype_text" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="17dp"
+            android:layout_marginRight="18dp"
+            android:background="#55c8c8c8" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="18dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="22dp"
+                android:text="活动对象:"
+                android:textColor="#444444"
+                android:textSize="14sp" />
+
+            <RadioGroup
+                android:id="@+id/rest_targettype_rg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rest_targetmale_rb"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_order_paytype"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="男"
+                    android:textColor="@drawable/selector_order_paytype_text" />
+
+                <RadioButton
+                    android:id="@+id/rest_targetfemale_rb"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_order_gendertype"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="女"
+                    android:textColor="@drawable/selector_order_paytype_text" />
+
+                <RadioButton
+                    android:id="@+id/rest_targetunlimit_rb"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_order_paytype"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:text="不限"
+                    android:textColor="@drawable/selector_order_paytype_text" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="17dp"
+            android:layout_marginRight="18dp"
+            android:background="#55c8c8c8" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/radio_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="21dp"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="21dp"
+                android:text="语音主题:"
+                android:textColor="#444444"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/radio_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:layout_toRightOf="@id/radio_title"
+                android:clickable="true"
+                android:src="@drawable/icon_microphone2x" />
+
+            <TextView
+                android:id="@+id/tv_click_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="11dp"
+                android:layout_toRightOf="@id/radio_icon"
+                android:clickable="true"
+                android:paddingBottom="5dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:text="点击录制"
+                android:textColor="#818181"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/iv_delete_audio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@id/tv_click_radio"
+                android:clickable="true"
+                android:src="@drawable/delete_audio_icon"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/tv_delete_audio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/iv_delete_audio"
+                android:clickable="true"
+                android:text="点击删除"
+                android:textColor="#818181"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@id/tv_click_radio"
+                android:textColor="@color/Black000000" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="#e9e9e9" />
+
+        <TextView
+            android:id="@+id/rest_published_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp"
+            android:text="发布邀请"
+            android:textColor="#e2a07b"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>

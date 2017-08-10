@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.neishenme.what.activity.ActiveNearByActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/Black000000">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:paddingBottom="10dp"
+            android:paddingLeft="17dp"
+            android:paddingRight="10dp"
+            android:paddingTop="13dp"
+            android:src="@drawable/icon_back2x"></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="附近"
+            android:textColor="@color/Whiteffffff"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_contener"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f7f7f7">
+
+        <!--<TextView-->
+            <!--android:id="@+id/active_detail_sign_up"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_gravity="bottom"-->
+            <!--android:background="@drawable/bg_date2x"-->
+            <!--android:gravity="center"-->
+            <!--android:text="我要报名"-->
+            <!--android:textColor="#272727"-->
+            <!--android:textSize="16sp"-->
+            <!--android:visibility="gone" />-->
+
+        <com.handmark.pulltorefresh.library.PullToRefreshGridView
+            android:id="@+id/active_detail_pgv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/active_detail_sign_up"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="18dp"
+            android:layout_marginTop="14dp"
+            android:background="#f7f7f7"
+            android:columnWidth="168dp"
+            android:numColumns="2"
+            android:scrollbars="none"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="5dp"></com.handmark.pulltorefresh.library.PullToRefreshGridView>
+
+    </RelativeLayout>
+</LinearLayout>

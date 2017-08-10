@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.neishenme.what.activity.PayOrderActivity">
+
+    <!--旧的支付界面ui,已弃用, 查看 activiey_pay_order 界面-->
+    <RelativeLayout
+        android:id="@+id/rl_sign_one"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:background="@color/Black000000">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:paddingBottom="5dp"
+            android:paddingLeft="17dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:src="@drawable/icon_back2x" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingTop="4dp"
+            android:text="确认活动"
+            android:textColor="@color/Whiteffffff"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_sign_five"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_sign_one">
+
+        <ImageView
+            android:id="@+id/iv_restaurant_icon_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="19dp"
+            android:background="@drawable/confirm_order_restaurant" />
+
+        <TextView
+            android:id="@+id/tv_restrantant_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="48dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/Black_4a4a4a"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/iv_restaurant_icon_logo"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:layout_marginTop="9dp"
+            android:background="@color/yellow_cacaca" />
+
+        <ImageView
+            android:id="@+id/iv_restaurant_logo"
+            android:layout_width="84dp"
+            android:layout_height="84dp"
+            android:layout_marginLeft="46dp"
+            android:layout_marginTop="61dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/picture_moren" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="142dp"
+            android:layout_marginTop="71dp"
+            android:textColor="@color/Black4d4b4b"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_sign_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="142dp"
+            android:layout_marginTop="96dp"
+            android:text="预定时间:"
+            android:textColor="@color/Black_727272"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="96dp"
+            android:layout_toRightOf="@+id/tv_sign_two"
+            android:textColor="@color/Red_f54a4a"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/iv_restaurant_logo"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/tv_price"
+            android:text="金额:"
+            android:textColor="@color/Black_444444"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/iv_restaurant_logo"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/tv_sign_three"
+            android:textColor="@color/Red_f54a4a"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_sign_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/iv_restaurant_logo"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="25dp"
+            android:text="元"
+            android:textColor="@color/Red_f54a4a"
+            android:textSize="10sp" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/v_sign_four"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/rl_sign_five"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginTop="11dp"
+        android:background="@color/yellow_cacaca"></View>
+
+    <TextView
+        android:id="@+id/tv_sign_six"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/v_sign_four"
+        android:layout_marginBottom="9dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="34dp"
+        android:text="选择支付方式"
+        android:textColor="@color/Black_404040"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/view_sign_seven"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_below="@+id/tv_sign_six"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:background="@drawable/confirm_restaurant_line"></View>
+
+    <RelativeLayout
+        android:id="@+id/rl_pay_cash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_sign_seven">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="17dp"
+            android:layout_marginLeft="21dp"
+            android:layout_marginTop="17dp"
+            android:text="现金余额"
+            android:textColor="@color/Black_444444"
+            android:textSize="13sp" />
+
+        <CheckBox
+            android:id="@+id/cb_pay_cash"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/selector_check_paytype"
+            android:button="@null"
+            android:checked="true" />
+
+        <TextView
+            android:id="@+id/tv_cash_leave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="31dp"
+            android:layout_toLeftOf="@+id/cb_pay_cash"
+            android:text="￥ 0.00"
+            android:textColor="@color/gray_8b8b8b"
+
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/rl_pay_cash"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:background="@color/yellow_aacacaca" />
+
+    <RelativeLayout
+        android:id="@+id/rl_pay_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_pay_cash">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="18dp"
+            android:layout_marginLeft="21dp"
+            android:layout_marginTop="17dp"
+            android:text="活动余额"
+            android:textColor="@color/Black_444444"
+            android:textSize="13sp" />
+
+        <CheckBox
+            android:id="@+id/cb_pay_activity"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/selector_check_paytype"
+            android:button="@null"
+            android:checked="true" />
+
+        <TextView
+            android:id="@+id/tv_activity_leave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="31dp"
+            android:layout_toLeftOf="@+id/cb_pay_activity"
+            android:text="￥ 0.00"
+            android:textColor="@color/gray_8b8b8b"
+
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/rl_pay_activity"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:background="@color/yellow_aacacaca" />
+
+    <RelativeLayout
+        android:id="@+id/rl_pay_zhifubao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_pay_activity">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="11dp"
+            android:layout_marginLeft="21dp"
+            android:layout_marginTop="11dp"
+            android:src="@drawable/zhifubao_icon"
+            android:textSize="13sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="17dp"
+            android:layout_marginLeft="64dp"
+            android:text="支付宝"
+            android:textColor="@color/Black_444444"
+            android:textSize="13sp" />
+
+        <CheckBox
+            android:id="@+id/cb_pay_zhifibao"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/selector_check_paytype"
+            android:button="@null"
+            android:clickable="false" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/rl_pay_zhifubao"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:background="@color/yellow_aacacaca" />
+
+    <RelativeLayout
+        android:id="@+id/rl_pay_weixin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_pay_zhifubao">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="11dp"
+            android:layout_marginLeft="21dp"
+            android:layout_marginTop="11dp"
+            android:src="@drawable/weixing_icon"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="17dp"
+            android:layout_marginLeft="64dp"
+            android:text="微信支付"
+            android:textColor="@color/Black_444444"
+            android:textSize="13sp" />
+
+        <CheckBox
+            android:id="@+id/cb_pay_weixin"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignBaseline="@+id/textView2"
+            android:layout_alignBottom="@+id/textView2"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/selector_check_paytype"
+            android:button="@null"
+            android:clickable="false" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/rl_pay_weixin"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:background="@color/yellow_aacacaca" />
+
+    <TextView
+        android:id="@+id/tv_forget_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/rl_pay_weixin"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="20dp"
+        android:paddingTop="8dp"
+        android:text="忘记支付密码?"
+        android:textColor="@color/Blue7091b3"
+        android:textSize="10sp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_date2x">
+
+        <TextView
+            android:id="@+id/order_total_price_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="19dp"
+            android:layout_marginLeft="17dp"
+            android:textColor="@color/Red_f56161"
+            android:textSize="13sp" />
+
+        <Button
+            android:id="@+id/order_pay_now_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/confirm_order_btn"
+            android:gravity="center"
+            android:text="立即支付"
+            android:textColor="@color/Whiteffffff"
+            android:textSize="13sp" />
+    </RelativeLayout>
+</RelativeLayout>

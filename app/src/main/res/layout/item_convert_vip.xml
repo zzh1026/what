@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_sign_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:textSize="13sp"
+        android:textColor="@color/Black_545454" />
+
+    <TextView
+        android:id="@+id/tv_old_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tv_sign_two"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/tv_sign_two"
+        android:background="@drawable/old_prive"
+        android:gravity="center"
+        android:lines="1"
+        android:textColor="@color/yellow_c58f2c"
+        android:textSize="9sp" />
+
+    <TextView
+        android:id="@+id/item_convert_vip_convert_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tv_sign_two"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/tv_old_price"
+        android:textColor="#9f00"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/tv_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_sign_two"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/yellow_cacaca"
+        android:textSize="9sp" />
+
+    <CheckBox
+        android:id="@+id/cb_170"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/selector_conver_vip_checkbox"
+        android:button="@null"
+        android:clickable="false"
+        android:enabled="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/tv_right"
+        android:layout_marginTop="3dp"></View>
+
+</RelativeLayout>

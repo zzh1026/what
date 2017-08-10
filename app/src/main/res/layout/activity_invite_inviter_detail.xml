@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.neishenme.what.activity.InviteInviterDetailActivity">
+
+    <com.neishenme.what.view.CustomScrollView
+        android:id="@+id/custom_sv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/invite_user_face_rl">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:descendantFocusability="blocksDescendants">
+
+            <RelativeLayout
+                android:id="@+id/rl_service_photo"
+                android:layout_width="match_parent"
+                android:layout_height="236dp">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/vp_carousel"
+                    android:layout_width="match_parent"
+                    android:layout_height="236dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true" />
+
+                <com.neishenme.what.view.IndicatorLayout
+                    android:id="@+id/indicate_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/vp_carousel"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginRight="15dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_sign_one"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_below="@id/rl_service_photo">
+
+                <TextView
+                    android:id="@+id/invite_title_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="21dp"
+                    android:textColor="@color/Black4d4b4b"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/invite_price_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="39dp"
+                    android:layout_marginTop="14dp"
+                    android:textColor="@color/redf43"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/invite_info_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="35dp"
+                    android:textColor="@color/gray_656363"
+                    android:textSize="10sp" />
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="125dp"
+                    android:background="@color/redcccccc"></View>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/redcccccc"></View>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_sign_four"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_sign_one"
+                android:layout_marginBottom="14dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="19dp"
+                    android:background="@drawable/invite_detail_alarm" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:text="活动时间:"
+                    android:textColor="@color/Black_373434"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/invite_time_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="22dp"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/Black_373434"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/invite_time_destence_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/green_3c9a90"
+                    android:textSize="9sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:layout_above="@+id/ll_sign_five"
+                android:layout_marginLeft="19dp"
+                android:background="@color/redcccccc"></View>
+
+            <LinearLayout
+                android:id="@+id/ll_sign_five"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_sign_four"
+                android:layout_marginBottom="14dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/invite_detail_flag" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginTop="15dp"
+                    android:text="活动地点:"
+                    android:textColor="@color/Black_373434"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/invite_place_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="22dp"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/Black_373434"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:layout_above="@+id/ll_sign_six"
+                android:layout_marginLeft="19dp"
+                android:background="@color/redcccccc"></View>
+
+            <LinearLayout
+                android:id="@+id/ll_sign_six"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_sign_five"
+                android:layout_marginBottom="14dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="19dp"
+                    android:background="@drawable/invite_detail_site" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginTop="15dp"
+                    android:text="餐厅地址:"
+                    android:textColor="@color/Black_373434"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/invite_address_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="22dp"
+                    android:layout_marginTop="15dp"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:padding="5dp"
+                    android:textColor="@color/Black_373434"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/invite_map_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:clickable="true"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="5dp"
+                    android:src="@drawable/invite_detail_coordinate"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/ll_sign_six"
+                android:background="@color/redcccccc"></View>
+
+            <TextView
+                android:id="@+id/tv_sign_seven"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_sign_six"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="17dp"
+                android:text="已加入用户"
+                android:textColor="@color/Black494747" />
+
+            <TextView
+                android:id="@+id/invite_joiner_number_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/tv_sign_seven"
+                android:layout_marginBottom="1dp"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@id/tv_sign_seven"
+                android:text="(0人已加入)"
+                android:textColor="@color/gray_656363"
+                android:textSize="10sp" />
+
+            <com.neishenme.what.view.GridViewAdjustHeight
+                android:id="@+id/invite_joiner_gv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_sign_seven"
+                android:layout_marginBottom="50dp"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="13dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:horizontalSpacing="5dp"
+                android:numColumns="4"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="5dp"></com.neishenme.what.view.GridViewAdjustHeight>
+
+        </RelativeLayout>
+    </com.neishenme.what.view.CustomScrollView>
+
+    <!--<RelativeLayout-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content">-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/invite_back_iv"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:paddingLeft="18dp"-->
+    <!--android:paddingTop="18dp"-->
+    <!--android:src="@drawable/back" />-->
+    <!--</RelativeLayout>-->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_88">
+
+        <View
+            android:id="@+id/title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_88"
+            android:background="#000000" />
+
+        <ImageView
+            android:id="@+id/invite_back_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingBottom="4dp"
+            android:paddingLeft="@dimen/margin_20"
+            android:paddingRight="10dp"
+            android:paddingTop="4dp"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/invite_detail_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="申请活动"
+            android:textColor="#fff"
+            android:textSize="14sp"
+            android:visibility="invisible" />
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/invite_user_face_rl"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_date2x"
+        android:visibility="invisible">
+
+        <Button
+            android:id="@+id/invite_user_go_btn"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/inviter_go_btn_bg"
+            android:text="立即出发"
+            android:textColor="#fff"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/invite_user_refresh_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:layout_toLeftOf="@id/invite_user_go_btn"
+            android:padding="5dp"
+            android:src="@drawable/invite_refresh"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/invite_other_destence_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/invite_user_refresh_btn"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="#ef5f62"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

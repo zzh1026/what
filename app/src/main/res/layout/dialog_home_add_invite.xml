@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#9000">
+
+    <!--<com.wonderkiln.blurkit.BlurLayout xmlns:blurkit="http://schemas.android.com/apk/res-auto"-->
+    <!--android:id="@+id/blurLayout"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--blurkit:blurRadius="10"-->
+    <!--blurkit:fps="0">-->
+
+    <!--</com.wonderkiln.blurkit.BlurLayout>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="bottom|center_horizontal"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/add_invite_free"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="bottom|center_horizontal"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <ImageView
+                    android:id="@+id/add_anim_pic_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="0"
+                    android:src="@drawable/add_invite_free_money" />
+
+                <TextView
+                    android:id="@+id/add_anim_text_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:alpha="0"
+                    android:text="免费加入"
+                    android:textColor="#fff"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/add_invite_money"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="46dp"
+                android:gravity="bottom|center_horizontal"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <ImageView
+                    android:id="@+id/add_anim_pic_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="0"
+                    android:src="@drawable/add_invite_use_money" />
+
+                <TextView
+                    android:id="@+id/add_anim_text_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:alpha="0"
+                    android:text="付费加入"
+                    android:textColor="#fff"
+                    android:textSize="11sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/add_anim_text_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="89dp"
+                android:layout_marginRight="89dp"
+                android:alpha="0"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:text="@string/join_dialog_text"
+                android:textColor="#8fff"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="81dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/layout_1"
+                android:layout_width="81dp"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/add_invite_join_1"
+                    android:layout_width="81dp"
+                    android:layout_height="match_parent"
+                    android:alpha="0"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/picture_moren" />
+
+                <ImageView
+                    android:id="@+id/add_invite_join_1_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="0"
+                    android:src="@drawable/invite_detail_vip_bg" />
+
+                <TextView
+                    android:id="@+id/add_invite_join_1_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:alpha="0"
+                    android:background="#9000"
+                    android:gravity="center"
+                    android:textColor="#fff"
+                    android:textSize="10sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_2"
+                android:layout_width="81dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp">
+
+                <ImageView
+                    android:id="@+id/add_invite_join_2"
+                    android:layout_width="81dp"
+                    android:layout_height="match_parent"
+                    android:alpha="0"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/picture_moren" />
+
+                <ImageView
+                    android:id="@+id/add_invite_join_2_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="0"
+                    android:src="@drawable/invite_detail_vip_bg" />
+
+                <TextView
+                    android:id="@+id/add_invite_join_2_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:alpha="0"
+                    android:background="#9000"
+                    android:gravity="center"
+                    android:textColor="#fff"
+                    android:textSize="10sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_3"
+                android:layout_width="81dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp">
+
+                <ImageView
+                    android:id="@+id/add_invite_join_3"
+                    android:layout_width="81dp"
+                    android:layout_height="match_parent"
+                    android:alpha="0"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/picture_moren" />
+
+                <ImageView
+                    android:id="@+id/add_invite_join_3_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="0"
+                    android:src="@drawable/invite_detail_vip_bg" />
+
+                <TextView
+                    android:id="@+id/add_invite_join_3_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:alpha="0"
+                    android:background="#9000"
+                    android:gravity="center"
+                    android:textColor="#fff"
+                    android:textSize="10sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dp">
+
+            <ImageView
+                android:id="@+id/add_invite_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="25dp"
+                android:padding="15dp"
+                android:src="@drawable/add_invite_calcel" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="1px"
+        android:layout_height="1px"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/transparent" />
+
+</RelativeLayout>

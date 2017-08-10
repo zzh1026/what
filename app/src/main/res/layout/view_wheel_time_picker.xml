@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aigestudio="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:fitsSystemWindows="false"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_white_border_black_radius_5"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/wheel_time_picker_title"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="title"
+            android:textColor="#222222"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:background="#eeeeee" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.aigestudio.wheelpicker.WheelPicker
+                android:id="@+id/wheel_time_picker_hour"
+                android:layout_width="0dp"
+                android:layout_height="115dp"
+                android:layout_weight="1"
+                android:background="#fff"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                aigestudio:wheel_curved="true"
+                aigestudio:wheel_indicator="true"
+                aigestudio:wheel_indicator_color="#eeeeee"
+                aigestudio:wheel_indicator_size="1dp"
+                aigestudio:wheel_item_align="center"
+                aigestudio:wheel_item_space="50dp"
+                aigestudio:wheel_item_text_color="#A7A7DB"
+                aigestudio:wheel_item_text_size="15sp"
+                aigestudio:wheel_selected_item_text_color="#536D8A"
+                aigestudio:wheel_visible_item_count="5" />
+
+            <com.aigestudio.wheelpicker.WheelPicker
+                android:id="@+id/wheel_time_picker_minute"
+                android:layout_width="0dp"
+                android:layout_height="115dp"
+                android:layout_weight="1"
+                android:background="#fff"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                aigestudio:wheel_curved="true"
+                aigestudio:wheel_indicator="true"
+                aigestudio:wheel_indicator_color="#eeeeee"
+                aigestudio:wheel_indicator_size="1dp"
+                aigestudio:wheel_item_align="center"
+                aigestudio:wheel_item_space="50dp"
+                aigestudio:wheel_item_text_color="#A7A7DB"
+                aigestudio:wheel_item_text_size="15sp"
+                aigestudio:wheel_selected_item_text_color="#536D8A"
+                aigestudio:wheel_visible_item_count="5" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:background="#eeeeee" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/wheel_time_picker_cancel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="取消" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="#eeeeee" />
+
+            <TextView
+                android:id="@+id/wheel_time_picker_commit"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="确认" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

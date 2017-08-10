@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:refresh="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/active_my_bg"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/Black000000">
+
+        <ImageView
+            android:id="@+id/my_vote_back"
+            style="@style/app_titlebar_back_image_style"
+            android:src="@drawable/icon_back2x"></ImageView>
+
+        <TextView
+            style="@style/app_titlebar_title_text_style"
+            android:text="我的投票" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/my_vote_star_content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="invisible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="94dp"
+                android:background="@drawable/my_vote_info_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.neishenme.what.view.RadiusImageViewFour
+                    android:id="@+id/my_vote_user_header"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_marginLeft="22dp"
+                    android:src="@drawable/my_vote_my_header" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="29dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/my_vote_user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Faker"
+                        android:textColor="#414141"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/my_vote_user_vote_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="累计已投 450 票"
+                        android:textColor="#414141"
+                        android:textSize="15sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.neishenme.what.view.refreshview.CustomRefreshLayout
+                android:id="@+id/my_vote_refresh_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                refresh:tr_pureScrollMode_on="true">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/my_vote_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="14dp"
+                    android:paddingRight="14dp">
+
+                </android.support.v7.widget.RecyclerView>
+            </com.neishenme.what.view.refreshview.CustomRefreshLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/my_vote_no_vote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:visibility="invisible">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/active_my_null_bg" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

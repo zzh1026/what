@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Whiteffffff"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <!--旧的编辑个人资料界面,已弃用, 新的界面见 activity_edit_self_info_old-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/Black000000">
+
+        <TextView
+            android:id="@+id/tv_cancle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingBottom="10dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:text="返回"
+            android:textColor="#fff"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="编辑个人资料"
+            android:textColor="@color/Whiteffffff"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--照片墙-->
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.neishenme.what.view.DraggableSquareView
+                    android:id="@+id/drag_square"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff" />
+
+                <LinearLayout
+                    android:id="@+id/loading_procress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="100dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/iv_progress_bar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="center"
+                        android:src="@drawable/progress_icon"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/tv_progress_bar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center"
+                        android:text="加载中。。。"
+                        android:textColor="@color/Whiteffffff" />
+                </LinearLayout>
+            </RelativeLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="39dp"
+                android:background="#f6f5f2"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:text="我的信息"
+                android:textColor="#939290"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:id="@+id/ll_name"
+                android:layout_width="match_parent"
+                android:layout_height="39dp"
+                android:layout_marginLeft="16dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="昵称"
+                    android:textColor="#939290"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="58dp"
+                    android:layout_weight="1"
+                    android:textColor="#525252"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="11dp"
+                    android:padding="5dp"
+                    android:src="@drawable/edit_more2x" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="16dp"
+                android:background="#f6f5f2" />
+
+            <LinearLayout
+                android:id="@+id/ll_date"
+                android:layout_width="match_parent"
+                android:layout_height="39dp"
+                android:layout_marginLeft="16dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="出生日期"
+                    android:textColor="#939290"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="33dp"
+                    android:layout_weight="1"
+                    android:textColor="#525252"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="16dp"
+                android:background="#f6f5f2" />
+
+            <LinearLayout
+                android:id="@+id/ll_sign"
+                android:layout_width="match_parent"
+                android:layout_height="39dp"
+                android:layout_marginLeft="16dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:text="个性签名"
+                    android:textColor="#939290"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_sign"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="33dp"
+                    android:layout_weight="1"
+                    android:hint="添加个人签名"
+                    android:textColor="#525252"
+                    android:textColorHint="#dcdcdc"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="16dp"
+                android:background="#f6f5f2" />
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="63dp"
+                android:layout_marginLeft="16dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="背景"
+                    android:textColor="#939290"
+                    android:textSize="13sp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/iv_self_bg"
+                    android:layout_width="63dp"
+                    android:layout_height="41dp"
+                    android:layout_marginRight="16dp"
+                    android:src="@drawable/bg_self" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="39dp"
+                android:background="#f6f5f2"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:text="我的音频"
+                android:textColor="#939290"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_voice"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/add_voice2x" />
+
+                <ImageView
+                    android:id="@+id/btn_delete_audio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/edit_self_delete" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="39dp"
+                android:background="#f6f5f2"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:text="我的视频"
+                android:textColor="#939290"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:id="@+id/ll_video"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/Whiteffffff"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginTop="15dp">
+
+                    <ImageView
+                        android:id="@+id/iv_video"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/add_video" />
+
+                    <ImageView
+                        android:id="@+id/edit_info_have_video_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/paly_audio_icon"
+                        android:visibility="invisible" />
+                </FrameLayout>
+
+                <ImageView
+                    android:id="@+id/btn_delete_video"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:src="@drawable/edit_self_delete" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="39dp"
+                android:background="#f6f5f2"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:text="我的兴趣"
+                android:textColor="#939290"
+                android:textSize="14sp" />
+
+
+            <!--歌手-->
+            <RelativeLayout
+                android:id="@+id/rl_singer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/Whiteffffff"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="17dp"
+                    android:src="@drawable/interest_music" />
+
+                <com.neishenme.what.view.TagCloudView
+                    android:id="@+id/tag_cloud_view_singer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="55dp"
+                    app:tcvBackground="@drawable/tag_singer_background"
+                    app:tcvItemBorderHorizontal="3dp"
+                    app:tcvTextColor="#ffffff" />
+
+
+                <TextView
+                    android:id="@+id/tv_like_music"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="55dp" />
+
+                <ImageView
+                    android:id="@+id/iv_singer_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="11dp"
+                    android:padding="5dp"
+                    android:src="@drawable/icon_more_grey2x" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="17dp"
+                android:background="#f6f5f2" />
+
+            <!--电影-->
+
+            <RelativeLayout
+                android:id="@+id/rl_movie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/Whiteffffff"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="17dp"
+                    android:src="@drawable/interest_movie" />
+
+                <com.neishenme.what.view.TagCloudView
+                    android:id="@+id/tag_cloud_view_movie"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="55dp"
+                    app:tcvBackground="@drawable/tag_movie_background"
+                    app:tcvItemBorderHorizontal="3dp"
+                    app:tcvTextColor="#ffffff" />
+
+
+                <TextView
+                    android:id="@+id/tv_like_movie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="55dp" />
+
+                <ImageView
+                    android:id="@+id/iv_movie_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="11dp"
+                    android:padding="5dp"
+                    android:src="@drawable/icon_more_grey2x" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="17dp"
+                android:background="#f6f5f2" />
+
+            <!--美食-->
+            <RelativeLayout
+                android:id="@+id/rl_food"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/Whiteffffff"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="17dp"
+                    android:src="@drawable/interest_food" />
+
+                <com.neishenme.what.view.TagCloudView
+                    android:id="@+id/tag_cloud_view_food"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="55dp"
+                    app:tcvBackground="@drawable/tag_food_background"
+                    app:tcvItemBorderHorizontal="3dp"
+                    app:tcvTextColor="#ffffff" />
+
+
+                <TextView
+                    android:id="@+id/tv_like_food"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="55dp" />
+
+                <ImageView
+                    android:id="@+id/iv_food_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="11dp"
+                    android:padding="5dp"
+                    android:src="@drawable/icon_more_grey2x" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="17dp"
+                android:background="#f6f5f2" />
+            <!--旅行-->
+            <RelativeLayout
+                android:id="@+id/rl_travel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/Whiteffffff"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="17dp"
+                    android:src="@drawable/interest_plece" />
+
+                <com.neishenme.what.view.TagCloudView
+                    android:id="@+id/tag_cloud_view_travel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="55dp"
+                    app:tcvBackground="@drawable/tag_travel_background"
+                    app:tcvItemBorderHorizontal="3dp"
+                    app:tcvTextColor="#ffffff" />
+
+
+                <TextView
+                    android:id="@+id/tv_like_travel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="55dp"
+
+                    />
+
+                <ImageView
+                    android:id="@+id/iv_travel_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="11dp"
+                    android:padding="5dp"
+                    android:src="@drawable/icon_more_grey2x" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="17dp"
+                android:background="#f6f5f2" />
+            <!--运动-->
+            <RelativeLayout
+                android:id="@+id/rl_sport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="17dp"
+                    android:src="@drawable/interest_sports" />
+
+                <com.neishenme.what.view.TagCloudView
+                    android:id="@+id/tag_cloud_view_sport"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="55dp"
+                    app:tcvBackground="@drawable/tag_sport_background"
+                    app:tcvItemBorderHorizontal="3dp"
+                    app:tcvTextColor="#ffffff" />
+
+
+                <TextView
+                    android:id="@+id/tv_like_sport"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="55dp"
+
+                    />
+
+                <ImageView
+                    android:id="@+id/iv_sports_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="11dp"
+                    android:padding="5dp"
+                    android:src="@drawable/icon_more_grey2x" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

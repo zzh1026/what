@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingBottom="13dp"
+    android:paddingTop="13dp">
+
+    <RelativeLayout
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp">
+
+        <com.neishenme.what.view.SGTextView
+            android:id="@+id/vote_list_user_ranking_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:text="1"
+            android:textSize="30sp" />
+    </RelativeLayout>
+
+    <!--<RelativeLayout-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="15dp"-->
+    <!--android:layout_weight="2">-->
+
+    <com.neishenme.what.view.CircleImageView
+        android:id="@+id/vote_list_user_header"
+        style="@style/star_vote_user_header_style"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="35dp"
+        android:src="@drawable/star_vote_user_header" />
+    <!--</RelativeLayout>-->
+
+    <TextView
+        android:id="@+id/vote_list_user_name"
+        style="@style/star_vote_user_name_style"
+        android:layout_marginRight="15dp"
+        android:gravity="start"
+        android:text="还有谁" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/star_vote_vote_content_style"
+            android:text="已投" />
+
+        <TextView
+            android:id="@+id/star_vote_user_vote_num"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:lines="1"
+            android:text="2"
+            android:textColor="#fb6464"
+            android:textSize="15sp" />
+
+        <TextView
+            style="@style/star_vote_vote_content_style"
+            android:layout_marginRight="30dp"
+            android:text="票" />
+
+    </LinearLayout>
+</LinearLayout>

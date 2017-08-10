@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="com.neishenme.what.activity.PickMoneyActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/Black000000">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:paddingBottom="10dp"
+            android:paddingLeft="17dp"
+            android:paddingRight="10dp"
+            android:paddingTop="13dp"
+            android:src="@drawable/icon_back2x"></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="提现"
+            android:textColor="@color/white_d1d1d1"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_bill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:paddingBottom="8dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="18dp"
+            android:paddingTop="10dp"
+            android:text="账单"
+            android:textColor="@color/white_d1d1d1"
+            android:textSize="14sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="53dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="21dp"
+            android:text="现金余额:"
+            android:textColor="@color/Black_525252"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_cash_leave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="21dp"
+            android:layout_marginTop="23dp"
+            android:textColor="@color/Black_525252"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="21dp"
+        android:layout_marginRight="21dp"
+        android:background="#2000" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp">
+
+        <TextView
+            android:id="@+id/tv_sign_one"
+            android:layout_width="wrap_content"
+            android:layout_height="54dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="21dp"
+            android:gravity="center"
+            android:text="提取现金:"
+            android:textColor="@color/Black_525252"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/et_sum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="22dp"
+            android:layout_toRightOf="@+id/tv_sign_one"
+            android:background="@null"
+            android:hint="请输入提取金额..."
+            android:phoneNumber="true"
+            android:textColorHint="@color/Gray_c2c2c2"
+            android:textSize="12dp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="21dp"
+        android:layout_marginRight="21dp"
+        android:background="#2000" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:gravity="center"
+        android:text="3——5个工作日内退回至原支付账号中"
+        android:textColor="@color/Black_727272"
+        android:textSize="12sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="36dp"
+        android:layout_marginRight="36dp"
+        android:layout_marginTop="11dp"
+        android:text="银行处理可能有延迟,具体以帐户的到账时间为准,由于余额可能会有多个支付账号,提现时有可能分多笔到账"
+        android:textColor="@color/Gray_b8b8b8"
+        android:textSize="10dp" />
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_pick_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="51dp"
+            android:background="@drawable/btn_pick_money"
+            android:text="申请退款"
+            android:textColor="@color/Whiteffffff"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/pick_money_forget_paypassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_pick_up"
+            android:layout_marginTop="11dp"
+            android:text="忘记支付密码?"
+            android:textColor="@color/Gray_b8b8b8"
+            android:textSize="10sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/btn_pick_up"
+            android:layout_alignParentLeft="true"
+            android:layout_alignRight="@+id/btn_pick_up"
+            android:layout_below="@+id/btn_pick_up"
+            android:layout_marginTop="11dp"
+            android:gravity="right"
+            android:text="每日可提现一次"
+            android:textColor="@color/Gray_b8b8b8"
+            android:textSize="10sp" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.neishenme.what.activity.PayOrderActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/Black000000">
+
+        <ImageView
+            android:id="@+id/vip_service_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:scaleType="center"
+            android:src="@drawable/icon_back2x"></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="VIP专享服务"
+            android:textColor="#fff"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/vip_service_right_img_bg" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    style="@style/user_detail_user_item_layout_style"
+                    android:layout_marginTop="5dp">
+
+                    <ImageView style="@style/user_detail_user_item_bg_style" />
+
+                    <TextView
+                        style="@style/vip_service_item_text_style"
+                        android:text="如何成为vip?" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/base_layout_wrap_wrap_style"
+                        android:layout_marginLeft="37dp"
+                        android:layout_marginTop="5dp"
+                        android:maxLines="1"
+                        android:text="1."
+                        android:textColor="#545454"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        style="@style/vip_service_text_content_style"
+                        android:layout_marginTop="5dp"
+                        android:maxLines="1"
+                        android:text="@string/vip_service_become_vip_1" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/base_layout_wrap_wrap_style"
+                        android:layout_marginLeft="37dp"
+                        android:layout_marginTop="15dp"
+                        android:text="2."
+                        android:textColor="#545454"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        style="@style/vip_service_text_content_style"
+                        android:layout_marginTop="15dp"
+                        android:maxLines="2"
+                        android:text="@string/vip_service_become_vip_2" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/user_detail_user_item_layout_style"
+                    android:layout_marginTop="30dp">
+
+                    <ImageView style="@style/user_detail_user_item_bg_style" />
+
+                    <TextView
+                        style="@style/vip_service_item_text_style"
+                        android:text="vip会获得那些特权?" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="37dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/vip_service_item_title"
+                        android:text="专席客服" />
+
+                    <TextView
+                        style="@style/vip_service_item_content"
+                        android:text="1对1专席客服,24小时不间断服务" />
+                </LinearLayout>
+
+                <View style="@style/vip_service_item_line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="37dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/vip_service_item_title"
+                        android:text="身份铭牌" />
+
+                    <TextView
+                        style="@style/vip_service_item_content"
+                        android:text="vip独有铭牌展现,与会员铭牌同时存在" />
+                </LinearLayout>
+
+                <View style="@style/vip_service_item_line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="37dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/vip_service_item_title"
+                        android:text="超级折扣" />
+
+                    <TextView
+                        style="@style/vip_service_item_content"
+                        android:text="任意专属活动,享受8.8折.不可以与满减券和折扣券同时使用" />
+                </LinearLayout>
+
+                <View style="@style/vip_service_item_line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="37dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/vip_service_item_title"
+                        android:text="会员推送" />
+
+                    <TextView
+                        style="@style/vip_service_item_content"
+                        android:text="每周可向专席客服申请一次免费会员推送广播活动服务一次" />
+                </LinearLayout>
+
+                <View style="@style/vip_service_item_line" />
+
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+</LinearLayout>

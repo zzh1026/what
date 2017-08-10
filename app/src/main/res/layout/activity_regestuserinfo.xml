@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/actionbar_login" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+
+            <FrameLayout
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginTop="61dp"
+                android:gravity="center">
+
+                <!--<com.neishenme.what.view.CircleImageView-->
+                <!--android:layout_width="120dp"-->
+                <!--android:layout_height="120dp"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:contentDescription="@string/strings_empty_txt"-->
+                <!--android:src="@color/shollowWhite" />-->
+
+                <com.neishenme.what.view.CircleImageView
+                    android:id="@+id/regest_user_head"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:src="@drawable/default_header" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="上传头像"
+                android:textColor="#444"
+                android:textSize="10sp" />
+
+            <LinearLayout
+                style="@style/login_user_info_style_linearlayout"
+                android:layout_marginTop="35dp">
+
+                <TextView
+                    style="@style/login_user_info_style_textview"
+                    android:text="个人昵称:" />
+
+                <EditText
+                    android:id="@+id/regest_user_name"
+                    style="@style/login_user_info_style_edittext"
+                    android:hint="请输入昵称..."
+                    android:maxLength="8" />
+
+            </LinearLayout>
+
+            <View
+                style="@style/login_user_info_style_line"
+                android:layout_marginTop="1dp" />
+
+            <LinearLayout style="@style/login_user_info_style_linearlayout">
+
+                <TextView
+                    style="@style/login_user_info_style_textview"
+                    android:text="个性签名:" />
+
+                <EditText
+                    android:id="@+id/regest_user_sign"
+                    style="@style/login_user_info_style_edittext"
+                    android:hint="请输入签名..."
+                    android:imeOptions="actionDone"
+                    android:maxLength="15" />
+
+            </LinearLayout>
+
+            <View style="@style/login_user_info_style_line" />
+
+            <LinearLayout style="@style/login_user_info_style_linearlayout">
+
+
+                <TextView
+                    style="@style/login_user_info_style_textview"
+                    android:text="出生日期:" />
+
+                <TextView
+                    android:id="@+id/regest_user_birthday"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="22dp"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:text="请选择出生日期..."
+                    android:textColor="#b4b4b3"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <View style="@style/login_user_info_style_line" />
+
+            <LinearLayout style="@style/login_user_info_style_linearlayout">
+
+
+                <TextView
+                    style="@style/login_user_info_style_textview"
+                    android:text="性别选择:" />
+
+                <RadioGroup
+                    android:id="@+id/rg_gender_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="22dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_gender_male"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_regest_gender"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="男"
+                        android:textColor="@drawable/selector_regest_gender_txt" />
+
+                    <RadioButton
+                        android:id="@+id/rb_gender_femal"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="22dp"
+                        android:layout_marginRight="110dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_regest_gender"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="女"
+                        android:textColor="@drawable/selector_regest_gender_txt" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/regest_userinfo_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="71dp"
+                android:background="@drawable/selector_login_state_bg"
+                android:enabled="false"
+                android:text="完 成"
+                android:textColor="#fff"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

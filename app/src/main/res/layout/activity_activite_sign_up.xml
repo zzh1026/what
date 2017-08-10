@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.neishenme.what.activity.ActiveSignUpActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/Black000000">
+
+        <ImageView
+            android:id="@+id/active_apply_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:paddingBottom="10dp"
+            android:paddingLeft="17dp"
+            android:paddingRight="10dp"
+            android:paddingTop="13dp"
+            android:src="@drawable/icon_back2x"></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="活动报名"
+            android:textColor="@color/Whiteffffff"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/active_apply_shared"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:padding="6dp"
+            android:src="@drawable/active_signup_shared_bg" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/active_signup_bg"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="56dp"
+            android:background="@drawable/active_signup_title_bg" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="53dp"
+            android:layout_marginTop="40dp"
+            android:text="如何被ta投票?"
+            android:textColor="#4b4b4b"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginLeft="47dp"
+            android:layout_marginRight="47dp"
+            android:layout_marginTop="27dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/active_signup_line_bg" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="@string/active_signup_describe_1"
+                    android:textColor="#4b4b4b"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="bottom"
+                    android:maxLines="2"
+                    android:text="@string/active_signup_describe_2"
+                    android:textColor="#4b4b4b"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:ellipsize="end"
+                        android:gravity="bottom"
+                        android:maxLines="2"
+                        android:paddingBottom="5dp"
+                        android:text="@string/active_signup_describe_3"
+                        android:textColor="#4b4b4b"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/active_apply_edit_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="3dp"
+                        android:gravity="bottom"
+                        android:padding="5dp"
+                        android:text="(完善资料)"
+                        android:textColor="#86a2da"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <RelativeLayout
+                android:id="@+id/active_sign_rl_menu"
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="45dp"
+                android:layout_marginLeft="85dp"
+                android:layout_marginRight="85dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/active_apply_get_autocode"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="11dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_active_sign_getcode_bg"
+                        android:gravity="center"
+                        android:textColor="#fff" />
+
+                    <TextView
+                        android:id="@+id/active_apply_submit"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="11dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_active_sign_submit_bg"
+                        android:gravity="center"
+                        android:textColor="#fff" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/active_signup_and_bg" />
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/active_apply_auto_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/active_sign_rl_menu"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="22dp"
+                android:background="@drawable/active_signup_edit_bg"
+                android:hint="请输入验证码..."
+                android:imeOptions="actionDone"
+                android:lines="1"
+                android:maxLines="1"
+                android:paddingBottom="10dp"
+                android:paddingLeft="15dp"
+                android:paddingTop="10dp"
+                android:singleLine="true"
+                android:textColorHint="#838383"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>

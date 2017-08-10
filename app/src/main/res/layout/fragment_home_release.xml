@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.neishenme.what.fragment.HomeReleaseFragment">
+
+    <LinearLayout
+        android:id="@+id/ll_main_worning"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/main_worning_bg"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/main_worning_pic_bg" />
+
+        <TextView
+            android:id="@+id/tv_main_worning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="20dp"
+            android:lineSpacingMultiplier="1.3"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:textColor="#fff"
+            android:textScaleX="1.1"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="53dp" />
+
+        <RelativeLayout
+            android:id="@+id/home_release__header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ececec"
+            android:gravity="center_vertical"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+
+            <RadioGroup
+                android:id="@+id/home_release_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/my_order_bg"
+                android:orientation="horizontal"
+                android:paddingBottom="1dp"
+                android:paddingTop="0.5dp">
+
+                <RadioButton
+                    android:id="@+id/home_release_quick"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_home_release_bg"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:text="极速发布"
+                    android:textColor="@color/selector_home_release_text"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/home_release_normal"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_home_release_bg"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="专属发布"
+                    android:textColor="@color/selector_home_release_text"
+                    android:textSize="14sp" />
+            </RadioGroup>
+
+            <ImageView
+                android:id="@+id/shou_function_release_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/show_function_home_release"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/home_release_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></FrameLayout>
+    </LinearLayout>
+
+</FrameLayout>

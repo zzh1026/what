@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.neishenme.what.activity.RegestXieyiActivity">
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginBottom="10dp"-->
+    <!--android:layout_marginLeft="16dp"-->
+    <!--android:layout_marginTop="37dp"-->
+    <!--android:text="内什么简介"-->
+    <!--android:textColor="@color/Black474747"-->
+    <!--android:textSize="14sp"-->
+    <!--android:textStyle="bold" />-->
+
+    <!--<View-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="14px"-->
+    <!--android:layout_marginBottom="11dp"-->
+    <!--android:layout_marginLeft="15dp"-->
+    <!--android:layout_marginRight="20dp"-->
+    <!--android:background="@drawable/about_us_line" />-->
+
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="25dp"-->
+    <!--android:layout_marginRight="40dp"-->
+    <!--android:text="内什么是一款由内什么（北京）信息技术有限公司独立开发的APP，作为中国首个基于高品质生活的陌交O2O平台，通过线下轻奢场景链接核心用户与高颜值异性或有共同话题的陌生人，致力于为城市新贵提供高品质的社交生活。"-->
+    <!--android:textColor="@color/Gray_737373"-->
+    <!--android:textSize="13sp" />-->
+
+    <!--<View-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="2px"-->
+    <!--android:layout_marginLeft="15dp"-->
+    <!--android:layout_marginRight="40dp"-->
+    <!--android:layout_marginTop="15dp"-->
+    <!--android:background="@color/Gray_ffcccccc" />-->
+
+    <!--<RelativeLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content">-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="50dp"-->
+    <!--android:layout_height="50dp"-->
+    <!--android:layout_marginBottom="15dp"-->
+    <!--android:layout_marginLeft="25dp"-->
+    <!--android:layout_marginTop="20dp"-->
+    <!--android:src="@drawable/about_us_weixing" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_calculate"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_marginLeft="100dp"-->
+    <!--android:text="内什么微信公众号: 内什么APP"-->
+    <!--android:textColor="@color/Black4e4e4e"-->
+    <!--android:textSize="13sp" />-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="50dp"-->
+    <!--android:layout_height="50dp"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_marginBottom="15dp"-->
+    <!--android:layout_marginRight="35dp"-->
+    <!--android:layout_marginTop="20dp"-->
+    <!--android:src="@drawable/weixin_account" />-->
+    <!--</RelativeLayout>-->
+
+    <!--<View-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="2px"-->
+    <!--android:layout_marginLeft="100dp"-->
+    <!--android:layout_marginRight="40dp"-->
+    <!--android:background="@color/Gray_ffcccccc" />-->
+
+    <!--<RelativeLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content">-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="50dp"-->
+    <!--android:layout_height="50dp"-->
+    <!--android:layout_marginBottom="15dp"-->
+    <!--android:layout_marginLeft="25dp"-->
+    <!--android:layout_marginTop="20dp"-->
+    <!--android:src="@drawable/weibo_icon" />-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_marginLeft="100dp"-->
+    <!--android:text="内什么新浪微薄: 内什么官微"-->
+    <!--android:textColor="@color/Black4e4e4e"-->
+    <!--android:textSize="13sp" />-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="50dp"-->
+    <!--android:layout_height="50dp"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_marginBottom="15dp"-->
+    <!--android:layout_marginRight="35dp"-->
+    <!--android:layout_marginTop="20dp"-->
+    <!--android:src="@drawable/weibo_account" />-->
+    <!--</RelativeLayout>-->
+
+    <!--<View-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="2px"-->
+    <!--android:layout_marginLeft="15dp"-->
+    <!--android:layout_marginRight="40dp"-->
+    <!--android:background="@color/Gray_ffcccccc" />-->
+    <WebView
+        android:id="@+id/about_us_wv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></WebView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/Black000000">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:paddingBottom="11dp"
+            android:paddingLeft="17dp"
+            android:paddingRight="10dp"
+            android:paddingTop="13dp"
+            android:src="@drawable/icon_back2x"></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="13dp"
+            android:text="注册协议"
+            android:textColor="@color/Whiteffffff"
+            android:textSize="16sp" />
+    </RelativeLayout>
+</RelativeLayout>

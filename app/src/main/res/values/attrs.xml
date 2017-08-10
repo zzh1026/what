@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="fromDegrees" format="float|reference" />
+    <attr name="toDegrees" format="float|reference" />
+    <attr name="childSize" format="dimension|reference" />
+
+	<declare-styleable name="ArcLayout">
+        <attr name="fromDegrees"/>
+        <attr name="toDegrees"/>
+        <attr name="childSize"/>
+	</declare-styleable>
+
+
+	<declare-styleable name="RayLayout">
+		<attr name="leftHolderWidth" format="dimension" />
+	</declare-styleable>
+
+    <declare-styleable name="HorizontalListView">
+        <attr name="dividerWidth" format="dimension" />
+        <attr name="android:divider" />
+        <attr name="android:requiresFadingEdge" />
+        <attr name="android:fadingEdgeLength" />
+    </declare-styleable>
+
+    <declare-styleable name="GFFloatingActionButton">
+        <attr name="fabColorPressed" format="color"/>
+        <attr name="fabColorNormal" format="color"/>
+        <attr name="fabIcon" format="reference"/>
+        <attr name="fabTitle" format="string"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="TagCloudView">
+        <attr name="tcvBackground" format="reference"/>
+        <attr name="tcvTextColor" format="color"/>
+        <attr name="tcvBorder" format="dimension"/>
+        <attr name="tcvTextSize" format="integer"/>
+        <attr name="tcvBorderItem" format="dimension"/>
+        <attr name="tcvItemBorderVertical" format="dimension"/>
+        <attr name="tcvItemBorderHorizontal" format="dimension"/>
+
+        <attr name="tcvSingleLine" format="boolean"/>
+        <attr name="tcvShowEndText" format="boolean"/>
+        <attr name="tcvShowRightImg" format="boolean"/>
+        <attr name="tcvEndText" format="string"/>
+        <attr name="tcvRightResId" format="reference"/>
+        <attr name="tcvCanTagClick" format="boolean"/>
+
+        <attr name="tcvTagResId" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="RoundAngleImageView">
+        <attr name="roundWidth" format="dimension" />
+        <attr name="roundHeight" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="EditPicsViewGroup">
+
+        <attr name="picDefaultResId" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="SmoothCheckBox">
+        <attr name="duration" format="integer"/>
+        <attr name="stroke_width" format="dimension"/>
+        <attr name="color_tick" format="color"/>
+        <attr name="color_checked" format="color"/>
+        <attr name="color_unchecked" format="color"/>
+        <attr name="color_unchecked_stroke" format="color"/>
+    </declare-styleable>
+
+    <!--这个是SGTextview的自定义效果-->
+    <!--功能主要有: 1, 是否加粗  2,描边的颜色 3,描边的宽度 4,是否使用过度线性处理,如果使用可以配置开始颜色,结束
+        颜色和渐变宽度,如果不使用则可以配置默认的颜色 -->
+    <declare-styleable name="SGTextView">
+        <attr name="sgText_isBold" format="boolean"/>
+        <attr name="sgText_storkColor" format="color"/>
+        <attr name="sgText_storkWidth" format="dimension"/>
+        <attr name="sgText_isShowGradient" format="boolean"/>
+        <attr name="sgText_GradientStartColor" format="color"/>
+        <attr name="sgText_GradientEndColor" format="color"/>
+        <attr name="sgText_GradientWidth" format="dimension"/>
+        <attr name="sgText_GradientDefaultColor" format="color"/>
+    </declare-styleable>
+
+</resources>

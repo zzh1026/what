@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="327dp"
+        android:layout_height="365dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="312dp"
+            android:layout_height="345dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/dialog_invite_time_out_bg">
+
+            <LinearLayout
+                android:layout_width="260dp"
+                android:layout_height="229dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="29dp"
+                android:background="@drawable/invite_time_out_content_bg"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="25dp"
+                    android:text="您的活动已超时30分钟"
+                    android:textColor="#000"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:id="@+id/invite_time_out_wait_layout"
+                    style="@style/invite_time_out_layout_style">
+
+                    <CheckBox
+                        android:id="@+id/invite_time_out_wait_cb"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:background="@drawable/selector_invite_time_out_wait"
+                        android:button="@null"
+                        android:focusable="false"
+                        android:clickable="false"
+                        android:enabled="false" />
+
+                    <TextView
+                        style="@style/invite_time_out_content_style"
+                        android:text="再等等" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/invite_time_out_cancel_layout"
+                    style="@style/invite_time_out_layout_style">
+
+                    <CheckBox
+                        android:id="@+id/invite_time_out_cancel_cb"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:background="@drawable/selector_invite_time_out_wait"
+                        android:button="@null"
+                        android:focusable="false"
+                        android:clickable="false"
+                        android:enabled="false" />
+
+                    <TextView
+                        style="@style/invite_time_out_content_style"
+                        android:text="取消活动" />
+                </LinearLayout>
+
+                <ListView
+                    android:id="@+id/invite_time_out_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginLeft="75dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@android:color/transparent"
+                    android:cacheColorHint="@android:color/transparent"
+                    android:divider="@android:color/transparent"
+                    android:dividerHeight="0dp"
+                    android:listSelector="@android:color/transparent"
+                    android:scrollbars="none"
+                    android:visibility="invisible"></ListView>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/invite_time_out_submit"
+                android:layout_width="178dp"
+                android:layout_height="28dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/invite_time_out_submit_bg"
+                android:gravity="center"
+                android:text="提交"
+                android:textColor="#000"
+                android:textSize="10sp" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/invite_time_out_cancel"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/invite_time_out_cancel" />
+    </RelativeLayout>
+
+</LinearLayout>

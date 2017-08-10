@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_white_border_black_radius_5"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/wheel_dialog_title"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="title"
+            android:textColor="#222222"
+            android:textSize="@dimen/txt_32" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_2"
+            android:background="#eeeeee" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--<RelativeLayout-->
+                <!--android:id="@+id/rl_year"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="120dp"-->
+                <!--android:layout_weight="1">-->
+
+                <!--<com.neishenme.what.view.loopview.LoopView-->
+                    <!--android:id="@+id/loopview_year"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerInParent="true" />-->
+
+                <!--<View-->
+                    <!--android:id="@+id/line_center_year"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="1dp"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:background="@color/transparent" />-->
+
+                <!--<View-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="1dp"-->
+                    <!--android:layout_above="@id/line_center_year"-->
+                    <!--android:layout_marginBottom="10dp"-->
+                    <!--android:layout_marginLeft="@dimen/margin_20"-->
+                    <!--android:layout_marginRight="@dimen/margin_20"-->
+                    <!--android:background="#eeeeee" />-->
+
+                <!--<View-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="1dp"-->
+                    <!--android:layout_below="@id/line_center_year"-->
+                    <!--android:layout_marginLeft="@dimen/margin_20"-->
+                    <!--android:layout_marginRight="@dimen/margin_20"-->
+                    <!--android:layout_marginTop="10dp"-->
+                    <!--android:background="#eeeeee" />-->
+            <!--</RelativeLayout>-->
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_weight="1">
+
+                <com.neishenme.what.view.loopview.LoopView
+                    android:id="@+id/loopview_month"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true" />
+
+                <View
+                    android:id="@+id/line_center_month"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerVertical="true"
+                    android:background="@color/transparent" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_above="@id/line_center_month"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="@dimen/margin_20"
+                    android:layout_marginRight="@dimen/margin_20"
+                    android:background="#eeeeee" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/line_center_month"
+                    android:layout_marginLeft="@dimen/margin_20"
+                    android:layout_marginRight="@dimen/margin_20"
+                    android:layout_marginTop="10dp"
+                    android:background="#eeeeee" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_weight="1">
+
+                <com.neishenme.what.view.loopview.LoopView
+                    android:id="@+id/loopview_day"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true" />
+
+                <View
+                    android:id="@+id/line_center_day"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerVertical="true"
+                    android:background="@color/transparent" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_above="@id/line_center_day"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="@dimen/margin_20"
+                    android:layout_marginRight="@dimen/margin_20"
+                    android:background="#eeeeee" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/line_center_day"
+                    android:layout_marginLeft="@dimen/margin_20"
+                    android:layout_marginRight="@dimen/margin_20"
+                    android:layout_marginTop="10dp"
+                    android:background="#eeeeee" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#eeeeee" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/cancel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_30"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="取消" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="#eeeeee" />
+
+            <TextView
+                android:id="@+id/commit"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/margin_30"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="确认" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

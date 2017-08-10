@@ -1,0 +1,32 @@
+<resources>
+    <!--txt-->
+    <dimen name="txt_28">20sp</dimen>
+    <dimen name="txt_32">20sp</dimen>
+    <dimen name="txt_40">20sp</dimen>
+
+
+
+    <dimen name="dimen_153">153dp</dimen>
+    <dimen name="size_17">17sp</dimen>
+    <dimen name="dimen_40">40dp</dimen>
+    <dimen name="dimen_10">10dp</dimen>
+    <dimen name="dimen_15">15dp</dimen>
+    <dimen name="size_13">13sp</dimen>
+    <dimen name="dimen_17">17dp</dimen>
+    <dimen name="size_11">11sp</dimen>
+    <dimen name="dimen_350">350dp</dimen>
+    <dimen name="dimen_50">50dp</dimen>
+    <dimen name="dimen_240">240dp</dimen>
+    <dimen name="dimen_63">63dp</dimen>
+    <dimen name="dimen_12">12dp</dimen>
+    <dimen name="size_14">14sp</dimen>
+    <dimen name="dimen_14">14dp</dimen>
+    <dimen name="dimen_7">7dp</dimen>
+    <dimen name="dimen_11">11dp</dimen>
+    <dimen name="dimen_47">47dp</dimen>
+    <dimen name="dimen_16">16dp</dimen>
+    <dimen name="dimen_35">35dp</dimen>
+
+    <!--内谁界面-->
+
+</resources>

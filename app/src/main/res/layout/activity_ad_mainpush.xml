@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.neishenme.what.activity.MainPushADActivity">
+
+    <RelativeLayout
+        android:id="@+id/ad_title"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/Black000000">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:paddingBottom="11dp"
+            android:paddingLeft="17dp"
+            android:paddingRight="10dp"
+            android:paddingTop="13dp"
+            android:src="@drawable/icon_back2x"></ImageView>
+
+        <TextView
+            android:id="@+id/ad_main_push_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="13dp"
+            android:textColor="@color/Whiteffffff"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/ad_main_push_shared"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:padding="10dp"
+            android:src="@drawable/active_signup_shared_bg"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <WebView
+        android:id="@+id/about_us_wv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ad_title"></WebView>
+
+    <com.neishenme.what.utils.NoTouchDanMuView
+        android:visibility="invisible"
+        android:id="@+id/ad_main_push_danmu"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:focusableInTouchMode="false"
+        android:layout_marginTop="60dp" />
+</RelativeLayout>

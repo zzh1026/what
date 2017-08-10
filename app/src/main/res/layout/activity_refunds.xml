@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_refunds"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:background="#fff"
+    >
+
+    <include layout="@layout/all_title_left_image" />
+
+    <!--图片上标题状态-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="110dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/refunds_state_textview"
+            android:text="提交申请" />
+
+        <TextView
+            style="@style/refunds_state_textview"
+            android:text="申请通过" />
+
+        <TextView
+            android:layout_marginLeft="18px"
+            style="@style/refunds_state_textview"
+            android:text="进行中" />
+
+        <TextView
+            android:layout_marginLeft="13px"
+            style="@style/refunds_state_textview"
+            android:text="完成"
+            android:id="@+id/textView5" />
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/iv_state_refunds"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/refunds_one" />
+
+    <!--日期显示-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13px"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:textSize="25px"
+                android:id="@+id/refunds_tv_submit_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#b8b8b8" />
+
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:textSize="25px"
+                android:id="@+id/refunds_submit_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20px"
+                android:textColor="#b8b8b8" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/refunds_apply_date"
+                android:textSize="25px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#b8b8b8" />
+
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/refunds_apply_time"
+                android:layout_width="wrap_content"
+                android:textSize="25px"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20px"
+                android:textColor="#b8b8b8" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/refunds_ing_date"
+                android:textSize="25px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#b8b8b8" />
+
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/refunds_ing_time"
+                android:layout_width="wrap_content"
+                android:textSize="25px"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20px"
+                android:textColor="#b8b8b8" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/refunds_end_date"
+                android:textSize="25px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#b8b8b8" />
+
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/refunds_end_time"
+                android:layout_width="wrap_content"
+                android:textSize="25px"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20px"
+                android:textColor="#b8b8b8" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:textSize="25px"
+        android:textColor="#d2d2d2"
+        android:layout_marginLeft="74px"
+        android:layout_marginTop="180px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/refunds_tv_submit_content"
+        android:id="@+id/textView4" />
+
+    <ImageView
+        android:id="@+id/refunds_imbttn"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="180px"
+        android:layout_width="370px"
+        android:layout_height="85px"
+        android:src="@drawable/refuns_button" />
+
+</LinearLayout>

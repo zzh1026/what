@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="109dp"
+    android:background="@drawable/item_my_coupons_list_bg"
+    android:orientation="horizontal">
+    <!--折扣类型-->
+    <RelativeLayout
+        android:layout_width="101dp"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/item_coupons_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7"
+                android:textColor="#f66d70"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="折"
+                android:textColor="#f66d70"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="12dp"
+        android:layout_marginTop="13dp"
+        android:background="@drawable/item_my_coupons_split_line_bg" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout style="@style/my_coupons_item_list_layout_style">
+
+            <TextView
+                android:id="@+id/item_coupons_type"
+                style="@style/my_coupons_item_list_title"
+                android:text="专属发布优惠券" />
+
+            <TextView
+                android:id="@+id/item_coupons_time"
+                style="@style/my_coupons_item_list_content"
+                android:layout_marginTop="5dp"
+                android:text="优惠券有效期: 16-12-11至16-12-22" />
+
+            <TextView
+                android:id="@+id/item_coupons_content_1"
+                style="@style/my_coupons_item_list_content"
+                android:layout_marginTop="4dp"
+                android:text="1.每单仅限用一张优惠券" />
+
+            <TextView
+                android:id="@+id/item_coupons_content_2"
+                style="@style/my_coupons_item_list_content"
+                android:text="2.满2000元使用该优惠券" />
+
+            <TextView
+                android:id="@+id/item_coupons_content_3"
+                style="@style/my_coupons_item_list_content"
+                android:text="3.优惠券不可叠加使用" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

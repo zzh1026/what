@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dialogBackground"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_dialog_cancle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_70"
+        android:layout_marginTop="@dimen/margin_84"
+        android:padding="5dp"
+        android:src="@drawable/dialog_cancle2x"
+        android:visibility="invisible" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_132"
+        android:layout_alignParentBottom="true" />
+
+    <ImageView
+        android:id="@+id/iv_dialog_choose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/view"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="10dp"
+        android:src="@drawable/dialog_cancle2x" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_time_distance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/iv_dialog_choose"
+        android:layout_marginBottom="104dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/tv_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:src="@drawable/selector_time" />
+
+        <ImageView
+            android:id="@+id/tv_distance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:src="@drawable/selector_distance" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_like_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/ll_time_distance"
+        android:layout_marginBottom="@dimen/margin_68"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/tv_man_like"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:src="@drawable/selector_man_like"
+            android:textSize="10sp" />
+
+        <ImageView
+            android:id="@+id/tv_woman_like"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:src="@drawable/selector_woman_like"
+            android:text="女生最爱" />
+
+        <ImageView
+            android:id="@+id/tv_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:src="@drawable/selector_price" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

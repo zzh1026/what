@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:refresh="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/Black000000">
+
+        <ImageView
+            android:id="@+id/pick_money_calcel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:scaleType="center"
+            android:src="@drawable/icon_back2x"></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="提现"
+            android:textColor="#fff"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/pick_money_select_all"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="20dp"
+            android:paddingTop="4dp"
+            android:text="全选"
+            android:textColor="#fff"
+            android:textSize="14sp"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.neishenme.what.view.refreshview.CustomRefreshLayout
+            android:id="@+id/pick_money_refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            refresh:tr_pureScrollMode_on="true">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:overScrollMode="never"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:descendantFocusability="blocksDescendants"
+                    android:orientation="vertical">
+
+                    <LinearLayout style="@style/pick_money_item_layout_style">
+
+                        <ImageView style="@style/pick_money_item_bg_style" />
+
+                        <TextView
+                            style="@style/pick_money_item_text_style"
+                            android:text="现金余额" />
+
+                        <TextView
+                            android:id="@+id/pick_money_my_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="21dp"
+                            android:text="￥ 3500"
+                            android:textColor="#444343"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:layout_marginLeft="17dp"
+                        android:layout_marginRight="17dp"
+                        android:background="@drawable/confirm_restaurant_line"></View>
+
+                    <LinearLayout
+                        android:id="@+id/pick_money_list_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout style="@style/pick_money_item_layout_style">
+
+                            <ImageView style="@style/pick_money_item_bg_style" />
+
+                            <TextView
+                                style="@style/pick_money_item_text_style"
+                                android:text="提取现金" />
+                        </LinearLayout>
+
+                        <!--<android.support.v7.widget.RecyclerView-->
+                        <!--android:id="@+id/pick_money_list_recycle"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:paddingLeft="20dp"-->
+                        <!--android:paddingRight="20dp"></android.support.v7.widget.RecyclerView>-->
+
+                        <com.neishenme.what.view.ListViewAdjustHeight
+                            android:id="@+id/pick_money_list_listview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:cacheColorHint="@android:color/transparent"
+                            android:divider="@android:color/transparent"
+                            android:dividerHeight="0dp"
+                            android:listSelector="@android:color/transparent"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"></com.neishenme.what.view.ListViewAdjustHeight>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="50dp"
+                        android:gravity="center"
+                        android:text="3——5个工作日内退回至原支付账号中"
+                        android:textColor="@color/Black_727272"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="36dp"
+                        android:layout_marginRight="36dp"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/pick_money_describes"
+                        android:textColor="@color/Gray_b8b8b8"
+                        android:textSize="10dp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="50dp"
+                        android:paddingLeft="40dp"
+                        android:paddingRight="40dp">
+
+                        <Button
+                            android:id="@+id/pick_money_pick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="25dp"
+                            android:background="@drawable/pick_money_pick_bg"
+                            android:text="申请退款"
+                            android:textColor="@color/Whiteffffff"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/pick_money_forget_paypassword"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@id/pick_money_pick"
+                            android:layout_below="@id/pick_money_pick"
+                            android:layout_marginTop="11dp"
+                            android:text="忘记支付密码?"
+                            android:textColor="@color/Gray_b8b8b8"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@id/pick_money_pick"
+                            android:layout_below="@id/pick_money_pick"
+                            android:layout_marginTop="11dp"
+                            android:text="每日可提现1次"
+                            android:textColor="@color/Gray_b8b8b8"
+                            android:textSize="10sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </ScrollView>
+        </com.neishenme.what.view.refreshview.CustomRefreshLayout>
+
+        <LinearLayout
+            android:id="@+id/pick_money_no_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/pick_money_no_money_bg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="59dp"
+                android:text="暂无可提现金额"
+                android:textColor="#000"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

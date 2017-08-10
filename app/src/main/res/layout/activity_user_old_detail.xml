@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    tools:context="com.neishenme.what.activity.UserDetailOldActivity">
+
+    <!--这是旧的用户详情界面,新的用户详情界面  见  activity_user_detail-->
+    <com.neishenme.what.view.CustomScrollView
+        android:id="@+id/userdetail_scrol_cs"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="@+id/user_detail_agree_btn"
+        android:scrollbars="none">
+        <!--android:layout_alignParentBottom="true">-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/_ffffff"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/user_detail_background"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_440"
+                android:background="@drawable/picture_moren">
+
+                <ImageView
+                    android:id="@+id/user_detail_background_iv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/picture_moren" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#4000">
+
+                    <TextView
+                        android:id="@+id/tv_user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_34"
+                        android:layout_marginTop="@dimen/margin_104"
+                        android:textColor="@color/_ffffff"
+                        android:textSize="@dimen/txt_32"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/iv_user_attention"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/margin_36"
+                        android:layout_marginTop="@dimen/margin_100"
+                        android:src="@drawable/user_detail_attention" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_34"
+                        android:layout_marginRight="@dimen/margin_36"
+                        android:layout_marginTop="@dimen/margin_168"
+                        android:background="@drawable/user_detail_line" />
+                    <!--android:src="@drawable/user_detail_line" />-->
+
+                    <TextView
+                        android:id="@+id/user_detail_sign"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="15dp"
+                        android:maxLength="30"
+                        android:singleLine="true"
+                        android:textColor="@color/_bcbcbc"
+                        android:textSize="@dimen/txt_22" />
+
+                    <LinearLayout
+                        android:id="@+id/user_detail_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@id/user_detail_sign"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="11dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/user_detail_gender"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical" />
+
+                        <TextView
+                            android:id="@+id/user_detail_age"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_12"
+                            android:textColor="@color/_ffffff"
+                            android:textSize="@dimen/txt_24" />
+
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:layout_width="@dimen/height_120"
+                        android:layout_height="@dimen/width_120"
+                        android:layout_above="@id/user_detail_info"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center">
+
+                        <com.neishenme.what.view.CircleImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:background="@drawable/user_detail_head_bg" />
+
+                        <com.neishenme.what.view.CircleImageView
+                            android:id="@+id/user_detail_icon_head"
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/user_detail_head_bg"
+                            android:scaleType="centerCrop" />
+
+                    </FrameLayout>
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_90"
+                android:background="@color/_ffffff">
+
+                <TextView
+                    style="@style/UserDetail_My"
+                    android:text="我的相册" />
+            </RelativeLayout>
+
+            <HorizontalScrollView
+                android:id="@+id/hl_user_photo"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_348"
+                android:layout_marginLeft="@dimen/margin_36"
+                android:background="@color/_ffffff"
+                android:paddingBottom="@dimen/margin_32"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/first_image"
+                        android:layout_width="167dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_gravity="start"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/picture_moren" />
+
+                    <LinearLayout
+                        android:id="@+id/id_gallery"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="7dp"
+                        android:descendantFocusability="blocksDescendants"
+                        android:orientation="horizontal">
+
+                        <GridView
+                            android:id="@+id/gridview"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:columnWidth="81dp"
+                            android:horizontalSpacing="5dp"
+                            android:scrollbars="none"
+                            android:verticalSpacing="5dp"></GridView>
+                    </LinearLayout>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <View style="@style/UserDetail_Line_1" />
+
+            <RelativeLayout
+                android:id="@+id/rl_audio_all"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_282"
+                android:background="@color/_ffffff">
+
+                <TextView
+                    android:id="@+id/tv_user_voice"
+                    style="@style/UserDetail_My"
+                    android:layout_marginTop="@dimen/margin_32"
+                    android:text="我的音频" />
+
+                <TextView
+                    android:id="@+id/tv_audio_empty"
+                    android:layout_width="@dimen/width_136"
+                    android:layout_height="@dimen/height_136"
+                    android:layout_below="@id/tv_user_voice"
+                    android:layout_marginLeft="@dimen/margin_42"
+                    android:layout_marginTop="@dimen/margin_40"
+                    android:gravity="center"
+                    android:text="对方暂无音频"
+                    android:textColor="@color/Black000000"
+                    android:visibility="gone" />
+
+                <FrameLayout
+                    android:id="@+id/fl_user_voice"
+                    android:layout_width="@dimen/width_136"
+                    android:layout_height="@dimen/height_136"
+                    android:layout_below="@id/tv_user_voice"
+                    android:layout_marginLeft="@dimen/margin_42"
+                    android:layout_marginTop="@dimen/margin_40"
+                    android:clickable="true">
+
+                    <com.neishenme.what.view.CircleImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@drawable/user_detail_head_bg" />
+
+                    <com.neishenme.what.view.CircleImageView
+                        android:id="@+id/user_detail_civ"
+                        android:layout_width="@dimen/height_128"
+                        android:layout_height="@dimen/width_128"
+                        android:layout_gravity="center"
+                        android:src="@drawable/user_detail_voice_play" />
+                </FrameLayout>
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/line_video"
+                style="@style/UserDetail_Line_1" />
+
+            <RelativeLayout
+                android:id="@+id/rl_video_all"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_306"
+                android:background="@color/_ffffff">
+
+                <TextView
+                    android:id="@+id/tv_user_video"
+                    style="@style/UserDetail_My"
+                    android:text="我的视频" />
+
+                <LinearLayout
+                    android:id="@+id/ll_video"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_below="@id/tv_user_video"
+                    android:layout_marginLeft="@dimen/margin_34"
+                    android:layout_marginTop="@dimen/margin_38">
+
+                    <TextView
+                        android:id="@+id/tv_video_empty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="90dp"
+                        android:gravity="center"
+                        android:text="对方暂无视频"
+                        android:textColor="@color/Black000000"
+                        android:visibility="gone" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_video_frame"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp">
+
+                        <ImageButton
+                            android:id="@+id/ib_video_preview"
+                            android:layout_width="128dp"
+                            android:layout_height="128dp"
+                            android:background="@color/Black000000"
+                            android:scaleType="centerCrop" />
+
+                        <ImageView
+                            android:id="@+id/ib_play_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:enabled="true"
+                            android:src="@drawable/paly_audio_icon" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/line_audio"
+                style="@style/UserDetail_Line_1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/_ffffff"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/tv_user_interest"
+                    style="@style/UserDetail_My"
+                    android:text="我的兴趣" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_music"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_30">
+
+                    <ImageView
+                        style="@style/UserDetail_Interest_imageview"
+                        android:src="@drawable/interest_music" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_interest_music"
+                        style="@style/UserDetail_Interest_relativelayout"></RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tv_interest_music"
+                        style="@style/UserDetail_Interest_textview"></TextView>
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/line_music"
+                    style="@style/UserDetail_Line_2" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_movie"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_18">
+
+                    <ImageView
+                        style="@style/UserDetail_Interest_imageview"
+                        android:src="@drawable/interest_movie" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_interest_movie"
+                        style="@style/UserDetail_Interest_relativelayout"></RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tv_interest_movie"
+                        style="@style/UserDetail_Interest_textview"></TextView>
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/line_movie"
+                    style="@style/UserDetail_Line_2" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_food"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_18">
+
+                    <ImageView
+                        style="@style/UserDetail_Interest_imageview"
+                        android:src="@drawable/interest_food" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_interest_food"
+                        style="@style/UserDetail_Interest_relativelayout"></RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tv_interest_food"
+                        style="@style/UserDetail_Interest_textview"></TextView>
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/line_food"
+                    style="@style/UserDetail_Line_2" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_place"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_18">
+
+                    <ImageView
+                        style="@style/UserDetail_Interest_imageview"
+                        android:src="@drawable/interest_plece" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_interest_place"
+                        style="@style/UserDetail_Interest_relativelayout"></RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tv_interest_place"
+                        style="@style/UserDetail_Interest_textview"></TextView>
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/line_place"
+                    style="@style/UserDetail_Line_2" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_sport"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="9dp"
+                    android:layout_marginTop="@dimen/margin_18">
+
+                    <ImageView
+                        style="@style/UserDetail_Interest_imageview"
+                        android:src="@drawable/interest_sports" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_interest_sports"
+                        style="@style/UserDetail_Interest_relativelayout"></RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tv_interest_sports"
+                        style="@style/UserDetail_Interest_textview"></TextView>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </com.neishenme.what.view.CustomScrollView>
+
+    <View
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_88"
+        android:background="@color/_010101" />
+
+    <ImageView
+        android:id="@+id/iv_icon_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="9dp"
+        android:paddingTop="6dp"
+        android:src="@drawable/back" />
+
+    <ImageView
+        android:id="@+id/iv_icon_null"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/user_detail_username_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/margin_34"
+        android:layout_marginTop="12dp"
+        android:textColor="#fff"
+        android:textSize="@dimen/txt_32"
+        android:textStyle="bold"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/user_detail_attention_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/margin_36"
+        android:layout_marginTop="6dp"
+        android:padding="8dp"
+        android:textColor="#dfff"
+        android:textSize="13sp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/user_detail_agree_btn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/Whiteffffff"
+        android:gravity="center"
+        android:text="同意TA"
+        android:textColor="@color/Black_3e3c3c"
+        android:textSize="16sp" />
+</RelativeLayout>

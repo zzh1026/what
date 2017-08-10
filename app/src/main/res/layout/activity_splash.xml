@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.SplashActivity">
+
+    <ImageView
+        android:id="@+id/splash_logo_nsm"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/splash_nsm" />
+
+    <TextView
+        android:id="@+id/splash_ad_jump"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_margin="15dp"
+        android:background="@drawable/ad_jump_bg"
+        android:gravity="center"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:text="跳过"
+        android:textColor="#fff"
+        android:textSize="13sp"
+        android:visibility="invisible" />
+
+</RelativeLayout>

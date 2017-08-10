@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:refresh="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true">
+
+    <com.neishenme.what.view.refreshview.CustomRefreshLayout
+        android:id="@+id/star_vote_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/star_vote_detail_my_info"
+        refresh:tr_pureScrollMode_on="true">
+
+        <com.neishenme.what.view.CustomScrollView
+            android:id="@+id/star_vote_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffff"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/star_vote_star_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="169dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/picture_moren" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="169dp"
+                    android:background="#4000" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="117dp"
+                    android:background="@drawable/star_vote_paihang_list_bg"
+                    android:descendantFocusability="blocksDescendants"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/star_vote_star_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="46dp"
+                        android:textColor="#404141"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/star_vote_star_vote"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginTop="12dp"
+                        android:textColor="#fd6667"
+                        android:textSize="15sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@drawable/star_vote_line_bg" />
+
+                    <com.neishenme.what.view.ListViewAdjustHeight
+                        android:id="@+id/star_vote_vote_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="6dp"
+                        android:cacheColorHint="@android:color/transparent"
+                        android:divider="@android:color/transparent"
+                        android:dividerHeight="0dp"
+                        android:listSelector="@android:color/transparent"></com.neishenme.what.view.ListViewAdjustHeight>
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="68dp"
+                    android:layout_height="68dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="83dp"
+                    android:background="@drawable/star_vote_paihang_header_bg">
+
+                    <com.neishenme.what.view.CircleImageView
+                        android:id="@+id/star_vote_star_header"
+                        android:layout_width="62dp"
+                        android:layout_height="62dp"
+                        android:layout_gravity="center"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/star_vote_star_header" />
+                </FrameLayout>
+            </RelativeLayout>
+        </com.neishenme.what.view.CustomScrollView>
+    </com.neishenme.what.view.refreshview.CustomRefreshLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp">
+
+        <View
+            android:id="@+id/star_vote_title_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/Black000000"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/star_vote_back"
+            style="@style/app_titlebar_back_image_style"
+            android:src="@drawable/icon_back2x"></ImageView>
+
+        <TextView
+            style="@style/app_titlebar_title_text_style"
+            android:text="排行榜" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/star_vote_detail_my_info"
+        android:layout_width="match_parent"
+        android:layout_height="73dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/star_vote_user_info"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="4dp"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/star_vote_my_ranking_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="23dp"
+            android:text="2000"
+            android:textColor="#505050"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <com.neishenme.what.view.CircleImageView
+                android:id="@+id/star_vote_my_header"
+                style="@style/star_vote_user_header_style"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="17dp"
+                android:src="@drawable/star_vote_user_header" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/star_vote_my_name"
+            style="@style/star_vote_user_name_style"
+            android:text="还有谁" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/star_vote_vote_content_style"
+                android:text="已投" />
+
+            <TextView
+                android:id="@+id/star_vote_my_vote_num"
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="1"
+                android:text="200"
+                android:textColor="#fb6464"
+                android:textSize="15sp" />
+
+            <TextView
+                style="@style/star_vote_vote_content_style"
+                android:layout_marginRight="47dp"
+                android:text="票" />
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

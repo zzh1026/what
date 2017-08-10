@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.GuideVideoActivity">
+
+    <com.neishenme.what.view.CustomVideoView
+        android:id="@+id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:src="@drawable/splash_btn_1" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/guide_video_rg"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/splash_btn_2" />
+
+    <RadioGroup
+        android:id="@+id/guide_video_rg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll_menu"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_point_0"
+            android:layout_width="7dp"
+            android:layout_height="7dp"
+            android:background="@drawable/selector_guide_video_rb"
+            android:button="@null"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/rb_point_1"
+            style="@style/StyleGuideVideoPoint" />
+
+        <RadioButton
+            android:id="@+id/rb_point_2"
+            style="@style/StyleGuideVideoPoint" />
+
+        <RadioButton
+            android:id="@+id/rb_point_3"
+            style="@style/StyleGuideVideoPoint" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/ll_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="22dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_enter_regest"
+            style="@style/splash_button"
+            android:background="@drawable/splash_btn_1"
+            android:text="注 册"
+            android:textColor="#c5c3c2" />
+
+        <Button
+            android:id="@+id/btn_enter_login"
+            style="@style/splash_button"
+            android:background="@drawable/splash_btn_2"
+            android:text="登 录"
+            android:textColor="#100e0d" />
+
+        <Button
+            android:id="@+id/btn_enter_home"
+            style="@style/splash_button"
+            android:background="@drawable/splash_btn_3"
+            android:text="逛 逛"
+            android:textColor="#cac9c9" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

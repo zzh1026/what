@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#9000">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="282dp">
+
+            <ImageView
+                android:id="@+id/add_anim_pic_1"
+                android:layout_width="78dp"
+                android:layout_height="78dp"
+                android:layout_marginLeft="75dp"
+                android:layout_marginTop="20dp"
+                android:alpha="0"
+                android:src="@drawable/add_invite_free_money" />
+
+            <ImageView
+                android:id="@+id/add_anim_pic_2"
+                android:layout_width="78dp"
+                android:layout_height="78dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="75dp"
+                android:layout_marginTop="20dp"
+                android:alpha="0"
+                android:src="@drawable/add_invite_use_money" />
+
+            <TextView
+                android:id="@+id/add_anim_text_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/add_anim_pic_1"
+                android:layout_marginLeft="94dp"
+                android:layout_marginTop="13dp"
+                android:alpha="0"
+                android:text="免费加入"
+                android:textColor="#fff"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/add_anim_text_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/add_anim_pic_1"
+                android:layout_marginRight="91dp"
+                android:layout_marginTop="13dp"
+                android:alpha="0"
+                android:text="付费加入"
+                android:textColor="#fff"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/add_anim_text_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/add_anim_text_2"
+                android:layout_marginLeft="85dp"
+                android:layout_marginRight="85dp"
+                android:layout_marginTop="25dp"
+                android:alpha="0"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:text="@string/join_dialog_text"
+                android:textColor="#aacecece"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/add_invite_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="25dp"
+                android:padding="15dp"
+                android:src="@drawable/add_invite_calcel" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

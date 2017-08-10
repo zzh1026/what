@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Whiteffffff"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/edit_self_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.neishenme.what.view.DraggableSquareView
+                    android:id="@+id/edit_self_photo_manage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff" />
+
+                <LinearLayout
+                    android:id="@+id/loading_procress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="100dp"
+                    android:visibility="invisible">
+
+                    <ImageView
+                        android:id="@+id/iv_progress_bar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="center"
+                        android:src="@drawable/progress_icon" />
+
+                    <TextView
+                        android:id="@+id/tv_progress_bar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center"
+                        android:text="加载中。。。"
+                        android:textColor="@color/Whiteffffff" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout style="@style/edit_self_user_item_layout_style">
+
+                <ImageView style="@style/edit_self_user_item_bg_style" />
+
+                <TextView
+                    style="@style/edit_self_user_item_text_style"
+                    android:text="基本信息" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/edit_self_base_username"
+                style="@style/edit_self_base_info_item_layout">
+
+                <TextView
+                    style="@style/edit_self_base_info_item_text_style"
+                    android:text="昵称" />
+
+                <TextView
+                    android:id="@+id/edit_self_username"
+                    style="@style/edit_self_base_info_item_content_style" />
+
+                <ImageView style="@style/edit_base_info_item_editimg_style" />
+            </RelativeLayout>
+
+            <View style="@style/edit_self_base_info_line_style" />
+
+            <RelativeLayout
+                android:id="@+id/edit_self_base_birthday"
+                style="@style/edit_self_base_info_item_layout">
+
+                <TextView
+                    style="@style/edit_self_base_info_item_text_style"
+                    android:text="出生日期" />
+
+                <TextView
+                    android:id="@+id/edit_self_birthday"
+                    style="@style/edit_self_base_info_item_content_style" />
+            </RelativeLayout>
+
+            <View style="@style/edit_self_base_info_line_style" />
+
+            <RelativeLayout
+                android:id="@+id/edit_self_base_sign"
+                style="@style/edit_self_base_info_item_layout">
+
+                <TextView
+                    style="@style/edit_self_base_info_item_text_style"
+                    android:text="个性签名" />
+
+                <TextView
+                    android:id="@+id/edit_self_sign"
+                    style="@style/edit_self_base_info_item_content_style"
+                    android:layout_marginRight="50dp"
+                    android:ellipsize="end"
+                    android:hint="添加个人签名"
+                    android:maxLines="1"
+                    android:textColorHint="#dcdcdc" />
+
+                <ImageView style="@style/edit_base_info_item_editimg_style" />
+            </RelativeLayout>
+
+            <View style="@style/edit_self_base_info_line_style" />
+
+            <RelativeLayout
+                android:id="@+id/edit_self_base_background"
+                style="@style/edit_self_base_info_item_layout"
+                android:layout_height="56dp">
+
+                <TextView
+                    style="@style/edit_self_base_info_item_text_style"
+                    android:text="背景" />
+
+                <TextView
+                    style="@style/edit_self_base_info_item_content_style"
+                    android:hint="点击自定义背景"
+                    android:textColorHint="#dcdcdc" />
+
+                <ImageView
+                    android:id="@+id/edit_self_background"
+                    android:layout_width="60dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:scaleType="center"
+                    android:src="@drawable/bg_self" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/window_bg_f4f3f3" />
+
+            <LinearLayout style="@style/edit_self_user_item_layout_style">
+
+                <ImageView style="@style/edit_self_user_item_bg_style" />
+
+                <TextView
+                    style="@style/edit_self_user_item_text_style"
+                    android:text="音频" />
+                    <!--android:text="我的音视频" />-->
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="105dp"
+                android:orientation="horizontal">
+
+                <LinearLayout style="@style/edit_self_voice_video_layout_style">
+
+                    <ImageView
+                        android:id="@+id/edit_self_voice"
+                        android:layout_width="59dp"
+                        android:layout_height="59dp"
+                        android:src="@drawable/add_voice2x" />
+
+                    <ImageView
+                        android:id="@+id/edit_self_voice_delete"
+                        style="@style/edit_self_voice_video_delete_bg_style" />
+                </LinearLayout>
+
+                <View
+                    android:visibility="invisible"
+                    android:id="@+id/user_detail_my_voice_video_line"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="13dp"
+                    android:background="@drawable/user_voice_video_line" />
+
+
+                <!--  android:visibility="invisible"-->
+                <LinearLayout
+                    android:visibility="invisible"
+                    style="@style/edit_self_voice_video_layout_style">
+
+                    <RelativeLayout
+                        android:layout_width="59dp"
+                        android:layout_height="59dp">
+
+                        <com.neishenme.what.view.RadiusImageViewFour
+                            android:id="@+id/edit_self_video"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/add_video" />
+
+                        <ImageView
+                            android:id="@+id/edit_self_video_play"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/paly_audio_icon"
+                            android:visibility="invisible" />
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/edit_self_video_delete"
+                        style="@style/edit_self_voice_video_delete_bg_style" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/window_bg_f4f3f3" />
+
+            <LinearLayout style="@style/edit_self_user_item_layout_style">
+
+                <ImageView style="@style/edit_self_user_item_bg_style" />
+
+                <TextView
+                    style="@style/edit_self_user_item_text_style"
+                    android:text="兴趣" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/edit_self_update_music"
+                style="@style/edit_self_user_interest_layout_style">
+
+                <ImageView
+                    style="@style/edit_self_user_interest_image_style"
+                    android:src="@drawable/interest_movie" />
+
+                <com.neishenme.what.view.TagCloudView
+                    android:id="@+id/edit_self_tag_cloud_music"
+                    style="@style/edit_self_user_interest_content_style"
+                    app:tcvBackground="@drawable/tag_movie_background"
+                    app:tcvItemBorderHorizontal="3dp"
+                    app:tcvTextColor="@color/user_detail_interest_movie" />
+
+                <TextView
+                    android:id="@+id/edit_self_music_null"
+                    style="@style/edit_self_user_interest_suggest_style" />
+
+                <ImageView style="@style/edit_self_user_interest_moreimg_bg_style" />
+            </RelativeLayout>
+
+            <View style="@style/edit_self_user_interest_split_line_style" />
+
+            <RelativeLayout
+                android:id="@+id/edit_self_update_food"
+                style="@style/edit_self_user_interest_layout_style">
+
+                <ImageView
+                    style="@style/edit_self_user_interest_image_style"
+                    android:src="@drawable/interest_food" />
+
+                <com.neishenme.what.view.TagCloudView
+                    android:id="@+id/edit_self_tag_cloud_food"
+                    style="@style/edit_self_user_interest_content_style"
+                    app:tcvBackground="@drawable/tag_food_background"
+                    app:tcvItemBorderHorizontal="3dp"
+                    app:tcvTextColor="@color/user_detail_interest_food" />
+
+                <TextView
+                    android:id="@+id/edit_self_food_null"
+                    style="@style/edit_self_user_interest_suggest_style" />
+
+                <ImageView style="@style/edit_self_user_interest_moreimg_bg_style" />
+            </RelativeLayout>
+
+            <View style="@style/edit_self_user_interest_split_line_style" />
+
+            <RelativeLayout
+                android:id="@+id/edit_self_update_place"
+                style="@style/edit_self_user_interest_layout_style">
+
+                <ImageView
+                    style="@style/edit_self_user_interest_image_style"
+                    android:src="@drawable/interest_plece" />
+
+                <com.neishenme.what.view.TagCloudView
+                    android:id="@+id/edit_self_tag_cloud_place"
+                    style="@style/edit_self_user_interest_content_style"
+                    app:tcvBackground="@drawable/tag_travel_background"
+                    app:tcvItemBorderHorizontal="3dp"
+                    app:tcvTextColor="@color/user_detail_interest_place" />
+
+                <TextView
+                    android:id="@+id/edit_self_place_null"
+                    style="@style/edit_self_user_interest_suggest_style" />
+
+                <ImageView style="@style/edit_self_user_interest_moreimg_bg_style" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:background="@color/window_bg_f4f3f3" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

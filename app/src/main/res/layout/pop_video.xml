@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Black_aa000000"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@null" />
+
+    <RelativeLayout
+        android:id="@+id/rl_popvideo_show_rl"
+        android:layout_width="match_parent"
+        android:layout_height="298dp"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/video_thumb_iv"
+            android:layout_width="match_parent"
+            android:layout_height="298dp"
+            android:scaleType="centerCrop"
+            android:src="@color/Black_aa000000" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/video_play" />
+
+        <LinearLayout
+            android:id="@+id/loading_procress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="100dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_progress_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="center"
+                android:src="@drawable/progress_icon"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tv_progress_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="加载中。。。"
+                android:textColor="@color/Whiteffffff" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_video_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_below="@id/rl_popvideo_show_rl"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/voice_frame"
+        android:text="删除重录"
+        android:textColor="@color/Whitef4f4f4"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/btn_video_complete"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_below="@id/btn_video_delete"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/voice_frame"
+        android:text="完成"
+        android:textColor="@color/Whitef4f4f4"
+        android:textSize="15sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        android:layout_weight="1"
+        android:background="@android:color/transparent" />
+
+</LinearLayout>

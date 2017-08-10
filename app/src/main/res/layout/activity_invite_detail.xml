@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.neishenme.what.activity.InviteInviterDetailActivity">
+
+    <com.neishenme.what.view.CustomScrollView
+        android:id="@+id/invite_detail_cscroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/invite_detail_together_show"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:descendantFocusability="blocksDescendants"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="420dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="246dp">
+
+                        <android.support.v4.view.ViewPager
+                            android:id="@+id/invite_detail_user_photos"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true" />
+
+                        <com.neishenme.what.view.IndicatorLayout
+                            android:id="@+id/invite_detail_user_indicate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@id/invite_detail_user_photos"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginRight="15dp"
+                            android:gravity="center_horizontal"
+                            android:orientation="horizontal" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/invite_detail_user_name"
+                            style="@style/invite_detail_username_style" />
+
+                        <LinearLayout style="@style/invite_detail_user_gender_layout_style">
+
+                            <ImageView
+                                android:id="@+id/invite_detail_user_gender"
+                                style="@style/invite_detail_gender_image_style" />
+
+                            <TextView
+                                android:id="@+id/invite_detail_user_age"
+                                style="@style/invite_detail_user_age_style" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/invite_detail_invite_type"
+                            style="@style/invite_detail_invite_type_style" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="26dp"
+                            android:layout_marginTop="13dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/invite_detail_user_sign"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:ellipsize="end"
+                                android:maxLines="2"
+                                android:paddingRight="15dp"
+                                android:textSize="12sp" />
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/invite_detail_more_info"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="bottom"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingBottom="8dp"
+                                    android:text="查看更多"
+                                    android:textColor="#6a6969"
+                                    android:textSize="13sp" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="7dp"
+                                    android:paddingBottom="9dp"
+                                    android:src="@drawable/invite_detail_more_info_bg" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="55dp"
+                    android:layout_marginRight="60dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="8dp"
+                        android:src="@drawable/invite_detail_money_bg" />
+
+                    <TextView
+                        android:id="@+id/invite_detail_invite_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:textColor="#f66d70"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <FrameLayout style="@style/invite_detail_user_logo_layout_style">
+
+                    <com.neishenme.what.view.CircleImageView style="@style/invite_detail_user_logo_bg_style" />
+
+                    <com.neishenme.what.view.CircleImageView
+                        android:id="@+id/invite_detail_user_logo"
+                        style="@style/invite_detail_user_logo_style"
+                        android:src="@drawable/picture_moren" />
+                </FrameLayout>
+            </RelativeLayout>
+
+            <View style="@style/invite_detail_xuline_style" />
+
+            <LinearLayout style="@style/invite_detail_diermokuai_linear_style">
+
+                <ImageView
+                    style="@style/invite_detail_diermokuai_image_style"
+                    android:src="@drawable/invite_detail_title_bg" />
+
+                <TextView
+                    style="@style/invite_detail_diermokuai_text_dis_style"
+                    android:text="主题:" />
+
+                <TextView
+                    android:id="@+id/invite_detail_invite_title"
+                    style="@style/invite_detail_diermokuai_text_content_style" />
+            </LinearLayout>
+
+            <View style="@style/invite_detail_diermokuai_shiline_style"></View>
+
+            <LinearLayout style="@style/invite_detail_diermokuai_linear_style">
+
+                <ImageView
+                    style="@style/invite_detail_diermokuai_image_style"
+                    android:src="@drawable/invite_detail_alarm" />
+
+                <TextView
+                    style="@style/invite_detail_diermokuai_text_dis_style"
+                    android:text="时间:" />
+
+                <TextView
+                    android:id="@+id/invite_detail_invite_time"
+                    style="@style/invite_detail_diermokuai_text_content_style" />
+
+                <TextView
+                    android:id="@+id/invite_detail_invite_distime"
+                    style="@style/invite_detail_invite_destime_style" />
+            </LinearLayout>
+
+            <View style="@style/invite_detail_diermokuai_shiline_style"></View>
+
+            <LinearLayout style="@style/invite_detail_diermokuai_linear_style">
+
+                <ImageView
+                    style="@style/invite_detail_diermokuai_image_style"
+                    android:src="@drawable/invite_detail_flag" />
+
+                <TextView
+                    style="@style/invite_detail_diermokuai_text_dis_style"
+                    android:text="地点:" />
+
+                <TextView
+                    android:id="@+id/invite_detail_invite_address"
+                    style="@style/invite_detail_diermokuai_text_content_style"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:lines="1" />
+
+                <RelativeLayout
+                    android:id="@+id/invite_detail_invite_address_map"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:visibility="invisible">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="13dp"
+                        android:layout_marginRight="50dp"
+                        android:src="@drawable/invite_detail_coordinate" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <View style="@style/invite_detail_diermokuai_shiline_style"></View>
+
+            <!--语音-->
+            <LinearLayout style="@style/invite_detail_diermokuai_linear_style"
+                android:id="@+id/ll_misic_all"
+                >
+
+                <ImageView
+                    style="@style/invite_detail_diermokuai_image_style"
+                    android:src="@drawable/icon_misic_left" />
+
+                <TextView
+                    style="@style/invite_detail_diermokuai_text_dis_style"
+                    android:text="语音:" />
+
+                <LinearLayout
+                    android:id="@+id/ll_music"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="36dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="5dp">
+
+                    <ImageView
+                        android:id="@+id/iv_misic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/icon_misic" />
+
+                    <TextView
+                        android:id="@+id/tv_misic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:gravity="center"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="10dp"
+                        android:text="点击播放"
+                        android:textColor="#7c7c7c"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View style="@style/invite_detail_diermokuai_shiline_style"
+                android:id="@+id/line_misic"
+                ></View>
+
+            <!--视频-->
+            <LinearLayout style="@style/invite_detail_diermokuai_linear_style"
+                android:id="@+id/ll_video_all"
+                >
+
+                <ImageView
+                    style="@style/invite_detail_diermokuai_image_style"
+                    android:src="@drawable/icon_video_left" />
+
+                <TextView
+                    style="@style/invite_detail_diermokuai_text_dis_style"
+                    android:text="视频:" />
+
+                <LinearLayout
+                    android:id="@+id/ll_video"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="36dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="5dp">
+
+                    <ImageView
+                        android:id="@+id/iv_video"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/icon_video" />
+
+                    <TextView
+                        android:id="@+id/tv_vedio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:gravity="center"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="10dp"
+                        android:text="点击播放"
+                        android:textColor="#7c7c7c"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <View style="@style/invite_detail_xuline_style"
+                android:id="@+id/line_video"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="47dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="16dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="已加入用户"
+                        android:textColor="@color/Black494747"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/invite_detail_join_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:textColor="#a3a3a3"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/invite_detail_talk_layout"
+                    android:layout_width="45dp"
+                    android:layout_height="32dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:alpha="0"
+                    android:background="@drawable/invite_detail_talk_bg"
+                    android:visibility="invisible">
+
+                    <ImageView
+                        android:id="@+id/invite_detail_talk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:scaleType="center"
+                        android:src="@drawable/invite_detail_talk_anim_bg" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/show_guide_talk_bg"
+                    android:layout_width="48dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/show_function_invite_talk_bg"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
+            <com.neishenme.what.view.GridViewAdjustHeight
+                android:id="@+id/invite_detail_join_persons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="13dp"
+                android:horizontalSpacing="5dp"
+                android:numColumns="4"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="5dp"></com.neishenme.what.view.GridViewAdjustHeight>
+        </LinearLayout>
+    </com.neishenme.what.view.CustomScrollView>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_88">
+
+        <TextView
+            android:id="@+id/invite_detail_title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_gravity="center"
+            android:alpha="0"
+            android:background="#000000"
+            android:gravity="center"
+            android:text="申请加入"
+            android:textColor="#fff"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/invite_detail_back_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingBottom="4dp"
+            android:paddingLeft="@dimen/margin_20"
+            android:paddingRight="10dp"
+            android:paddingTop="4dp"
+            android:src="@drawable/back" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/invite_detail_together_show"
+        style="@style/invite_detail_face_to_layout_style"
+        android:visibility="invisible">
+
+        <LinearLayout style="@style/invite_detail_user_distence_style">
+
+            <TextView
+                android:id="@+id/invite_detail_together_distence"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ellipsize="middle"
+                android:gravity="center"
+                android:hint="正在努力获取对方位置..."
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="#3f3f3f"
+                android:textColorHint="#3f3f3f"
+                android:textSize="13sp"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/invite_detail_together_map"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:scaleType="center"
+                android:src="@drawable/invite_detail_map"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/invite_detail_together_go"
+            style="@style/invite_detail_goto_btn_style"
+            android:text="立即出发"
+            android:visibility="invisible" />
+    </LinearLayout>
+</RelativeLayout>

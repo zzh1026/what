@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.neishenme.what.activity.RecognizedPeopleActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/Black000000">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:paddingBottom="10dp"
+            android:paddingLeft="17dp"
+            android:paddingRight="10dp"
+            android:paddingTop="13dp"
+            android:src="@drawable/icon_back2x"></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="活动"
+            android:textColor="@color/Whiteffffff"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_near"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:padding="5dp"
+            android:text="规则"
+            android:textColor="@color/Whiteffffff"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_contener"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f7f7f7">
+
+        <TextView
+            android:id="@+id/active_detail_sign_up"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:background="@drawable/bg_date2x"
+            android:gravity="center"
+            android:text="我要报名"
+            android:visibility="gone"
+            android:textColor="#272727"
+            android:textSize="16sp" />
+
+        <com.handmark.pulltorefresh.library.PullToRefreshGridView
+            android:id="@+id/active_detail_pgv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/active_detail_sign_up"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="18dp"
+            android:layout_marginTop="14dp"
+            android:background="#f7f7f7"
+            android:columnWidth="168dp"
+            android:numColumns="2"
+            android:scrollbars="none"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="5dp"></com.handmark.pulltorefresh.library.PullToRefreshGridView>
+
+        <LinearLayout
+            android:id="@+id/active_menu_ll"
+            android:layout_width="330dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/item_active_line_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="30dp">
+
+            <LinearLayout style="@style/activity_active_linearlayout">
+
+                <TextView
+                    style="@style/activity_active_text"
+                    android:text="活动倒计时" />
+
+                <TextView
+                    android:id="@+id/active_tv_time"
+                    style="@style/activity_active_text_num"
+                    android:text="--" />
+            </LinearLayout>
+
+            <View style="@style/activity_active_line_bg_style" />
+
+            <LinearLayout style="@style/activity_active_linearlayout">
+
+                <TextView
+                    style="@style/activity_active_text"
+                    android:text="已报名" />
+
+                <TextView
+                    android:id="@+id/active_tv_person_num"
+                    style="@style/activity_active_text_num"
+                    android:text="--" />
+            </LinearLayout>
+
+            <View style="@style/activity_active_line_bg_style" />
+
+            <LinearLayout style="@style/activity_active_linearlayout">
+
+                <TextView
+                    style="@style/activity_active_text"
+                    android:text="投票人数" />
+
+                <TextView
+                    android:id="@+id/active_tv_tickets"
+                    style="@style/activity_active_text_num"
+                    android:text="--" />
+            </LinearLayout>
+
+            <View style="@style/activity_active_line_bg_style" />
+
+            <LinearLayout style="@style/activity_active_linearlayout">
+
+                <TextView
+                    style="@style/activity_active_text"
+                    android:text="已成对" />
+
+                <TextView
+                    android:id="@+id/active_tv_pairing"
+                    style="@style/activity_active_text_num"
+                    android:text="--" />
+            </LinearLayout>
+
+            <View style="@style/activity_active_line_bg_style" />
+
+            <LinearLayout style="@style/activity_active_linearlayout">
+
+                <TextView
+                    style="@style/activity_active_text"
+                    android:text="投票总数" />
+
+                <TextView
+                    android:id="@+id/active_tv_all_ticket"
+                    style="@style/activity_active_text_num"
+                    android:text="--" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

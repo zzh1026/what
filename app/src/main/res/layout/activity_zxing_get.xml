@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true">
+
+    <View
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_88"
+        android:background="@color/_010101" />
+
+    <ImageView
+        android:id="@+id/iv_icon_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp"
+        android:paddingLeft="9dp"
+        android:paddingRight="8dp"
+        android:paddingTop="5dp"
+        android:src="@drawable/back" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/iv_zxing_erweima"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_centerInParent="true" />
+
+        <ImageView
+            android:layout_width="260dp"
+            android:layout_height="260dp"
+            android:src="@drawable/zxing_bg" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/zxing_erweima_ll"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_zxing_erweima"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#000"
+            android:clickable="false"
+            android:text="二维码"
+            android:textColor="#cfff" />
+
+        <Button
+            android:id="@+id/btn_zxing_saoyisao"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#000"
+            android:text="扫一扫"
+            android:textColor="#cfff" />
+    </LinearLayout>
+
+</RelativeLayout>

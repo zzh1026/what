@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.neishenme.what.activity.PayOrderActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/Black000000">
+
+                <ImageView
+                    android:id="@+id/pay_order_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:scaleType="center"
+                    android:src="@drawable/icon_back2x"></ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="确认活动"
+                    android:textColor="#fff"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginTop="18dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="center"
+                        android:src="@drawable/pay_order_title_icon_bg" />
+
+                    <TextView
+                        android:id="@+id/pay_order_invite_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="13dp"
+                        android:textColor="@color/Black_4a4a4a"
+                        android:textColorHighlight="#404040"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="17dp"
+                android:layout_marginRight="17dp"
+                android:background="@drawable/pay_order_title_line_bg" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="112dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/pay_order_logo"
+                    android:layout_width="84dp"
+                    android:layout_height="84dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="46dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/picture_moren" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/pay_order_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="70dp"
+                        android:layout_marginTop="24dp"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:textColor="#4e4e4e"
+                        android:textSize="13sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="预定时间:"
+                            android:textColor="#737373"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/pay_order_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:textColor="#f54a4a"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginBottom="12dp"
+                            android:layout_marginRight="30dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="金额:"
+                                android:textColor="#686868"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/pay_order_price"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:gravity="center"
+                                android:textColor="#f54a4a"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:paddingBottom="1dp"
+                                android:text="元"
+                                android:textColor="#f54a4a"
+                                android:textSize="11sp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#f4f3f3"></View>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="18dp"
+                    android:text="选择支付方式"
+                    android:textColor="@color/Black_404040"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+            </FrameLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/confirm_restaurant_line"></View>
+
+            <LinearLayout
+                android:id="@+id/pay_order_zhifubao"
+                style="@style/pay_order_layout_style">
+
+                <ImageView
+                    style="@style/pay_order_icon_bg_style"
+                    android:src="@drawable/zhifubao_icon" />
+
+                <TextView
+                    style="@style/pay_order_text_type_style"
+                    android:text="支付宝" />
+
+                <CheckBox
+                    android:id="@+id/pay_order_zhifubao_check"
+                    style="@style/pay_order_check_style"
+                    android:checked="true" />
+            </LinearLayout>
+
+            <View style="@style/pay_order_splite_line_style" />
+
+            <LinearLayout
+                android:id="@+id/pay_order_weixin"
+                style="@style/pay_order_layout_style">
+
+                <ImageView
+                    style="@style/pay_order_icon_bg_style"
+                    android:src="@drawable/weixing_icon" />
+
+                <TextView
+                    style="@style/pay_order_text_type_style"
+                    android:text="微信支付" />
+
+                <CheckBox
+                    android:id="@+id/pay_order_weixin_check"
+                    style="@style/pay_order_check_style" />
+            </LinearLayout>
+
+            <View style="@style/pay_order_splite_line_style" />
+
+            <LinearLayout
+                android:id="@+id/pay_order_pure"
+                style="@style/pay_order_layout_style">
+
+                <TextView
+                    style="@style/pay_order_text_type_style"
+                    android:layout_marginLeft="22dp"
+                    android:text="余额支付" />
+
+                <ImageView
+                    android:id="@+id/pay_order_purse_check"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="20dp"
+                    android:scaleType="center"
+                    android:src="@drawable/pay_order_purse_bg" />
+            </LinearLayout>
+
+            <View style="@style/pay_order_splite_line_style" />
+
+            <LinearLayout
+                android:id="@+id/pay_order_purse_active"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/pay_order_pay_cash"
+                    style="@style/pay_order_layout_style">
+
+                    <TextView
+                        style="@style/pay_order_text_type_style"
+                        android:layout_marginLeft="30dp"
+                        android:text="现金余额" />
+
+                    <TextView
+                        android:id="@+id/tv_pay_order_pay_cash"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:text="￥ 0.00"
+                        android:textColor="@color/gray_8b8b8b"
+                        android:textSize="12sp" />
+
+                    <CheckBox
+                        android:id="@+id/pay_order_cash_check"
+                        style="@style/pay_order_check_style" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/pay_order_active_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <View
+                        style="@style/pay_order_splite_line_style"
+                        android:layout_marginLeft="30dp" />
+
+                    <LinearLayout
+                        android:id="@+id/pay_order_pay_active"
+                        style="@style/pay_order_layout_style">
+
+                        <TextView
+                            style="@style/pay_order_text_type_style"
+                            android:layout_marginLeft="30dp"
+                            android:text="活动余额" />
+
+                        <TextView
+                            android:id="@+id/tv_pay_order_pay_active"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:text="￥ 0.00"
+                            android:textColor="@color/gray_8b8b8b"
+                            android:textSize="12sp" />
+
+                        <CheckBox
+                            android:id="@+id/pay_order_active_check"
+                            style="@style/pay_order_check_style" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View style="@style/pay_order_splite_line_style" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/pay_order_forget_pay_passwrod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="18dp"
+                android:paddingTop="8dp"
+                android:text="忘记支付密码?"
+                android:textColor="@color/Blue7091b3"
+                android:textSize="10sp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/pay_order_surepay_bg"
+        android:paddingTop="2dp">
+
+        <TextView
+            android:id="@+id/pay_order_total_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/Red_f56161"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/pay_order_start_pay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/confirm_order_btn"
+            android:gravity="center"
+            android:text="立即支付"
+            android:textColor="@color/Whiteffffff"
+            android:textSize="13sp" />
+    </RelativeLayout>
+</LinearLayout>

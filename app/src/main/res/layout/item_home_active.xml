@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="198dp"
+        android:background="@drawable/home_invite_item_bg"
+        android:orientation="horizontal"
+        android:paddingBottom="6dp"
+        android:paddingTop="2dp">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3">
+
+            <ImageView
+                android:id="@+id/invite_item_linebg_1"
+                android:layout_width="10dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/home_invite_1_1" />
+
+            <ImageView
+                android:id="@+id/invite_item_header_logo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="5dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/picture_moren" />
+
+            <ImageView
+                android:id="@+id/invite_item_hot_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="8dp"
+                android:src="@drawable/home_invite_hot_bg"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="207dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/invite_item_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="14dp"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textColor="#2c2c2c"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                style="@style/item_home_invite_out_layout"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/home_active_username"
+                    style="@style/item_home_invite_in_text_style"
+                    android:ellipsize="end"
+                    android:lines="1" />
+
+                <LinearLayout
+                    android:id="@+id/home_active_gender_bg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/home_active_gender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/home_active_age"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="#fff"
+                        android:textSize="10sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout style="@style/item_home_invite_out_layout">
+
+                <TextView
+                    style="@style/item_home_invite_in_text_style"
+                    android:text="时间:" />
+
+                <TextView
+                    android:id="@+id/home_active_time"
+                    style="@style/item_home_invite_in_content_style" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/item_home_invite_out_layout">
+
+                <TextView
+                    style="@style/item_home_invite_in_text_style"
+                    android:text="邀请对象:" />
+
+                <TextView
+                    android:id="@+id/invite_item_type"
+                    style="@style/item_home_invite_in_content_style" />
+            </LinearLayout>
+
+            <!--<LinearLayout-->
+            <!--android:id="@+id/home_active_money_layout"-->
+            <!--style="@style/item_home_invite_out_layout">-->
+
+            <!--<TextView-->
+            <!--style="@style/item_home_invite_in_text_style"-->
+            <!--android:text="财富值:" />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/home_active_money_content"-->
+            <!--style="@style/item_home_invite_in_content_style" />-->
+            <!--</LinearLayout>-->
+
+            <LinearLayout
+                style="@style/item_home_invite_out_layout"
+                android:layout_marginTop="10dp">
+
+                <!--<ImageView-->
+                <!--android:layout_width="13dp"-->
+                <!--android:layout_height="13dp"-->
+                <!--android:src="@drawable/home_invite_price_bg" />-->
+                <TextView
+                    style="@style/item_home_invite_in_text_style"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="1dp"
+                    android:text="预算:" />
+
+                <TextView
+                    android:id="@+id/invite_item_price_invite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:textColor="#f86c6d"
+                    android:textSize="@dimen/txt_32"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:layout_marginLeft="22dp"
+                android:layout_marginRight="7dp"
+                android:layout_marginTop="2dp"
+                android:gravity="center_vertical|right"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/invite_item_preview_bg" />
+
+                <TextView
+                    android:id="@+id/home_invite_preview_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:lines="1"
+                    android:text="0"
+                    android:textColor="#c3c3c3"
+                    android:textSize="11sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/invite_item_distence_bg" />
+
+                <TextView
+                    android:id="@+id/home_active_distence"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:lines="1"
+                    android:text="0km"
+                    android:textColor="#c3c3c3"
+                    android:textSize="10sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/invite_item_linebg_2"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/home_invite_1_2" />
+
+        <RelativeLayout
+            android:id="@+id/invite_item_join_invite"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2">
+
+            <ImageView
+                android:id="@+id/invite_item_linebg_3"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/home_invite_1_3" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#f7f7f7" />
+
+</LinearLayout>
